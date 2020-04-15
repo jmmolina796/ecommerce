@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build-css": "node-minify --compressor clean-css --input '../client/css/*.css' --output '../build/css/styles.css'"
+    "start": "node server.js",
+    "build-css": "node-minify --compressor clean-css --input './client/css/*.css' --output './build/css/styles.css'"
   },
   "author": "",
   "license": "ISC",
