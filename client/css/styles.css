@@ -48,6 +48,13 @@ header .icon_menu {
     margin-right: 20px;
 }
 
+footer {
+    color: #888888;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
 
 #main-message {
     background-color: rgb(192, 233, 255);
