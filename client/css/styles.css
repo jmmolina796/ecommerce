@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'playfair-bold';
+    src: url('../assets/fonts/PlayfairDisplay-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('../assets/fonts/PlayfairDisplay.ttf');
+}
+
 body {
     background-color: #fff;
+    font-family: "playfair", serif;
 }
 
 header {
@@ -14,6 +25,7 @@ h1 {
     font-size: 40px;
     margin: 0;
     margin-left: 20px;
+    font-family: "playfair-bold";
 }
 
 nav {
@@ -25,14 +37,14 @@ nav {
     display: none;
 }
 
-nav > li {
+nav>li {
     font-size: 16px;
     margin: 0;
     list-style: none;
     padding: 10px 10px 10px 30px;
 }
 
-header .icon_menu  {
+header .icon_menu {
     margin-right: 20px;
 }
 
@@ -42,14 +54,15 @@ header .icon_menu  {
     height: 350px;
 }
 
-#list-categories, #list-products {
+#list-categories,
+#list-products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0 20px 0;
 }
 
-#list-categories > article {
+#list-categories>article {
     width: 330px;
     height: 200px;
     border-radius: 10px;
@@ -59,18 +72,18 @@ header .icon_menu  {
     position: relative;
 }
 
-#list-categories > article > .image {
+#list-categories>article>.image {
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-#list-categories > article > .image > img {
+#list-categories>article>.image>img {
     height: 100%;
 }
 
-#list-categories > article > .info {
+#list-categories>article>.info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,38 +92,41 @@ header .icon_menu  {
     height: 100%;
 }
 
-#list-categories > article > .info > .name {
-    font-size: 25px;
+#list-categories>article>.info>.name {
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
 }
 
-#list-categories > article > .info > .message {
-    font-size: 16px;
+#list-categories>article>.info>.message {
+    font-size: 14px;
     padding: 10px 15px;
     background-color: #ffbc07;
     text-align: center;
     border-radius: 20px;
 }
 
-#list-categories > article > .info > .offer {
-   color: #0071fe;
-   text-shadow: 0px -3px 0px #fff;
-   font-size: 18px;
+#list-categories>article>.info>.offer {
+    color: #0071fe;
+    text-shadow: 0px -3px 0px #fff;
+    font-size: 18px;
+    font-family: cursive;
 }
 
 
-#list-categories > h2, #list-products > h2 {
+#list-categories>h2,
+#list-products>h2 {
     font-size: 30px;
     text-align: center;
+    font-family: "playfair-bold";
 }
 
-#list-products > article {
+#list-products>article {
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
-#list-products > article > .image {
+#list-products>article>.image {
     border-radius: 10px;
     width: 330px;
     height: 330px;
@@ -120,23 +136,23 @@ header .icon_menu  {
     align-items: center;
 }
 
-#list-products > article > .image > img {
+#list-products>article>.image>img {
     height: 300px;
 }
 
-#list-products > article > .info {
+#list-products>article>.info {
     display: flex;
     flex-direction: column;
 }
 
-#list-products > article > .info > .rating {
+#list-products>article>.info>.rating {
     text-align: center;
     padding: 20px 0 10px 0;
     font-weight: bold;
     font-size: 18px;
 }
 
-#list-products > article > .info > .name {
+#list-products>article>.info>.name {
     text-align: center;
     padding: 10px 0 10px 0;
 }
@@ -171,10 +187,11 @@ header .icon_menu  {
 }
 
 
-#list-products > article > .info > .price {
+#list-products>article>.info>.price {
     text-align: center;
     padding: 10px 0 10px 0;
     font-weight: bold;
+    font-family: sans-serif;
 }
 
 /* icons */
