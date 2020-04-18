@@ -42,14 +42,65 @@ header .icon_menu  {
     height: 350px;
 }
 
-#list-products {
+#list-categories, #list-products {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0 20px 0;
 }
 
-#list-products > h2 {
+#list-categories > article {
+    width: 330px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: rgb(254, 213, 220);
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#list-categories > article > .image {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#list-categories > article > .image > img {
+    height: 100%;
+}
+
+#list-categories > article > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    height: 100%;
+}
+
+#list-categories > article > .info > .name {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#list-categories > article > .info > .message {
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #ffbc07;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#list-categories > article > .info > .offer {
+   color: #0071fe;
+   text-shadow: 0px -3px 0px #fff;
+   font-size: 18px;
+}
+
+
+#list-categories > h2, #list-products > h2 {
     font-size: 30px;
     text-align: center;
 }
