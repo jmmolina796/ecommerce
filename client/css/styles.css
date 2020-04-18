@@ -93,24 +93,16 @@ header .icon_menu {
 }
 
 #list-categories>article>.info>.name {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+    font-family: "playfair-bold";
     text-align: left;
-}
-
-#list-categories>article>.info>.message {
-    font-size: 14px;
-    padding: 10px 15px;
-    background-color: #ffbc07;
-    text-align: center;
-    border-radius: 20px;
+    margin-bottom: 3px;
 }
 
 #list-categories>article>.info>.offer {
-    color: #0071fe;
-    text-shadow: 0px -3px 0px #fff;
-    font-size: 18px;
-    font-family: cursive;
+    font-size: 14px;
+    margin-top: 3px;
+    text-shadow: 1px 1px 1px #fff;
 }
 
 
