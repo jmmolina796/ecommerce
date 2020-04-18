@@ -100,9 +100,11 @@ header .icon_menu {
 }
 
 #list-categories>article>.info>.offer {
+    background-color: #ffbc07;
+    border-radius: 20px;
     font-size: 14px;
     margin-top: 3px;
-    text-shadow: 1px 1px 1px #fff;
+    padding: 5px 10px;
 }
 
 
