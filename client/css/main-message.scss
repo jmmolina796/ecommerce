@@ -1,0 +1,33 @@
+#main-message {
+    background-color: rgb(192, 233, 255);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 25px;
+}
+
+#main-message>.offer {
+    color: #2577fd;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#main-message>.slogan {
+    font-size: 40px;
+    font-family: "playfair-bold";
+}
+
+#main-message>.message {
+    font-size: 18px;
+}
+
+#main-message>.button {
+    background-color: #2577fd;
+    border-radius: 20px;
+    color: #fff;
+    padding: 15px;
+    font-family: "playfair-bold";
+    width: 120px;
+}

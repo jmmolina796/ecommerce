@@ -1,0 +1,35 @@
+#list-products>article>.info>.rating {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rating::before {
+    color: #ffbc07;
+}
+
+.rating-0::before {
+    color: gray;
+    content: "☆☆☆☆☆";
+}
+
+.rating-1::before {
+    content: "★☆☆☆☆";
+}
+
+.rating-2::before {
+    content: "★★☆☆☆";
+}
+
+.rating-3::before {
+    content: "★★★☆☆";
+}
+
+.rating-4::before {
+    content: "★★★★☆";
+}
+
+.rating-5::before {
+    content: "★★★★★";
+}
