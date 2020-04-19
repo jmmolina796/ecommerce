@@ -1,5 +1,6 @@
 @use "sass:map";
 @import "../globals/variables.scss";
+@import "../globals/mixins.scss";
 @import "./variables.scss";
 
 #list-categories {
@@ -16,8 +17,7 @@
 }
 
 #list-categories>article {
-    width: 330px;
-    height: 200px;
+    @include aspectRatio($withCategory, $proportionCategory);
     border-radius: 10px;
     background-color: map.get($bgColorOddCategory, $lightTheme);
     display: flex;
