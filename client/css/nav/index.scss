@@ -1,0 +1,19 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+nav {
+    position: absolute;
+    top: 100%;
+    width: 90%;
+    background-color: map.get($bgColorNav, $lightTheme);
+    left: 5%;
+    display: none;
+}
+
+nav>li {
+    font-size: 16px;
+    margin: 0;
+    list-style: none;
+    padding: 10px 10px 10px 30px;
+}

@@ -1,3 +1,7 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
 #list-products>article>.info>.rating {
     text-align: center;
     padding: 20px 0 10px 0;
@@ -6,11 +10,11 @@
 }
 
 .rating::before {
-    color: #ffbc07;
+    color: map.get($colorActiveRatingStar, $lightTheme);
 }
 
 .rating-0::before {
-    color: gray;
+    color: map.get($colorInactiveRatingStar, $lightTheme);
     content: "☆☆☆☆☆";
 }
 

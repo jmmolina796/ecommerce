@@ -1,0 +1,23 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+header {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    position: relative;
+}
+
+h1 {
+    color: map.get($colorHeaderH1, $lightTheme);
+    font-family: $mainBoldFont;
+    font-size: 40px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+header .icon_menu {
+    margin-right: 20px;
+}

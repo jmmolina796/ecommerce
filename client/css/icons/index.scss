@@ -1,0 +1,21 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+.icon_menu {
+    display: flex;
+    flex-direction: column;
+    height: 35px;
+    justify-content: center;
+    width: 35px;
+}
+
+.icon_menu::before {
+    background-color: map.get($colorMenu, $lightTheme);
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px map.get($colorMenu,$lightTheme),
+                0px 20px 0px map.get($colorMenu, $lightTheme);
+    content: "";
+    height: 5px;
+    margin-top: calc(-40px/2);
+}

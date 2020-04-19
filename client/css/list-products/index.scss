@@ -1,3 +1,7 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
 #list-products {
     display: flex;
     justify-content: center;
@@ -8,7 +12,7 @@
 #list-products>h2 {
     font-size: 30px;
     text-align: center;
-    font-family: "playfair-bold";
+    font-family: $mainBoldFont;
 }
 
 #list-products>article {
@@ -20,7 +24,7 @@
     border-radius: 10px;
     width: 330px;
     height: 330px;
-    background-color: rgb(247, 247, 247);
+    background-color: map.get($bgColorProduct, $lightTheme);
     display: flex;
     justify-content: center;
     align-items: center;

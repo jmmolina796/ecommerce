@@ -1,0 +1,9 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+
+footer {
+    color: map.get($secondaryColor, $lightTheme);;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+}

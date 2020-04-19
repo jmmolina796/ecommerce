@@ -1,0 +1,37 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+#main-message {
+    background-color: map.get($bgColorMainMessage, $lightTheme);
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    justify-content: space-evenly;
+    padding: 0 25px;
+}
+
+#main-message>.offer {
+    color: map.get($blueColor, $lightTheme);
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#main-message>.slogan {
+    font-family: $mainBoldFont;
+    font-size: 40px;
+}
+
+#main-message>.message {
+    font-size: 18px;
+}
+
+#main-message>.button {
+    background-color: map.get($bgColorMainMessageButton, $lightTheme);
+    border-radius: 20px;
+    color: map.get($colorMainMessageButton, $lightTheme);
+    font-family: $mainBoldFont;
+    padding: 15px;
+    width: 120px;
+}

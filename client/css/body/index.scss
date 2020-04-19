@@ -1,0 +1,9 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+body {
+    background-color: map.get($bgColorBody, $lightTheme);
+    color: map.get($mainColor, $lightTheme);
+    font-family: $mainFont;
+}

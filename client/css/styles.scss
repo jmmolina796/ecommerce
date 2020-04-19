@@ -1,17 +1,19 @@
-@use "./fonts";
+@use "./globals/fonts.scss";
 
-@use "./body.scss";
+@use "./body";
 
-@use "./icons.scss";
+@use "./icons";
 
-@use "./header.scss";
+@use "./nav";
 
-@use "./main-message.scss";
+@use "./header";
 
-@use "./list-categories.scss";
+@use "./main-message";
 
-@use "./list-products.scss";
+@use "./list-categories";
 
-@use "./rating.scss";
+@use "./list-products";
 
-@use "./footer.scss";
+@use "./rating";
+
+@use "./footer";
