@@ -1,37 +1,39 @@
 @use "sass:map";
 @import "../globals/variables.scss";
+@import "../globals/mixins.scss";
 @import "./variables.scss";
 
 #list-products {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 20px 0 20px 0;
 }
 
 #list-products>h2 {
+    font-family: $mainBoldFont;
     font-size: 30px;
     text-align: center;
-    font-family: $mainBoldFont;
 }
 
 #list-products>article {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
     margin-top: 10px;
 }
 
 #list-products>article>.image {
-    border-radius: 10px;
-    width: 330px;
-    height: 330px;
+    @include aspectRatio($withProduct, $proportionProduct);
+    align-items: center;
     background-color: map.get($bgColorProduct, $lightTheme);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #list-products>article>.image>img {
-    height: 300px;
+    height: 100%;
 }
 
 #list-products>article>.info {
@@ -39,15 +41,14 @@
     flex-direction: column;
 }
 
-
 #list-products>article>.info>.name {
-    text-align: center;
     padding: 10px 0 10px 0;
+    text-align: center;
 }
 
 #list-products>article>.info>.price {
-    text-align: center;
-    padding: 10px 0 10px 0;
-    font-weight: bold;
     font-family: sans-serif;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    text-align: center;
 }
