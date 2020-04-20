@@ -3,17 +3,20 @@
 @import "./variables.scss";
 
 nav {
-    position: absolute;
-    top: 100%;
-    width: 90%;
     background-color: map.get($bgColorNav, $lightTheme);
     left: 5%;
-    display: none;
-}
+    padding-bottom: 10px;
+    position: absolute;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    transition: transform 0.2s;
+    width: 90%;
 
-nav>li {
-    font-size: 16px;
-    margin: 0;
-    list-style: none;
-    padding: 10px 10px 10px 30px;
+    li {
+        font-size: 16px;
+        margin: 0;
+        list-style: none;
+        padding: 20px 20px 20px 30px;
+    }
 }

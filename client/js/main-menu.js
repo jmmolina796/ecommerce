@@ -2,8 +2,16 @@ import { $, $_ } from './utils';
 
 $_("#main_menu", "click", () => {
     let hidden = true;
-    return () => {
-        $("nav").style.display = hidden ? "block" : "none";
+    const clickFunction = () => {
+        $("nav").style.transform = "scaleY(0)";
+        document.removeEventListener("click", clickFunction);
+    }
+    return e => {
+        $("nav").style.transform = hidden ? "scaleY(1)" : "scaleY(0)";
         hidden = !hidden;
+        e.stopPropagation();
+        
+        document.addEventListener("click", clickFunction);
+
     };
 });
