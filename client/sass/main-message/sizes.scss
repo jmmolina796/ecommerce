@@ -1,0 +1,42 @@
+@mixin small {
+    #main-message {
+        justify-content: center;
+        .message-container {
+            align-items: center;
+        }
+    }
+}
+
+@mixin medium {
+    #main-message {
+        height: 500px;
+        justify-content: space-evenly;
+
+        .message-container {
+            height: 500px;
+            align-items: flex-start;
+        }
+
+        .image-container {
+            display: block;
+        }
+    }
+}
+
+@mixin large {
+    #main-message {
+        .message-container {
+            .message {
+                font-size: 23px;
+            }
+        
+            .offer {
+                font-size: 35px;
+            }
+        
+            .slogan {
+                font-size: 45px;
+            }
+        }
+    }
+}

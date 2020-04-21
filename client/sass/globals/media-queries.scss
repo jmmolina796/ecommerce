@@ -1,0 +1,19 @@
+@use "./mixins.scss" as *;
+
+@use "../main-message/sizes.scss" as main_message;
+
+@include small {
+    @include main_message.small;
+}
+
+@include medium {
+    @include main_message.medium;
+}
+
+@include large {
+    @include main_message.large;
+}
+
+@include xlarge {
+
+}

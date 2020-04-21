@@ -1,37 +1,53 @@
 @use "sass:map";
-@import "../globals/variables.scss";
-@import "./variables.scss";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
 
 #main-message {
     background-color: map.get($bgColorMainMessage, $lightTheme);
     display: flex;
-    flex-direction: column;
     height: 350px;
-    justify-content: space-evenly;
-    padding: 0 25px;
-}
+    justify-content: flex-start;
+    
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        justify-content: space-evenly;
+        padding: 0 25px;
+        z-index: 5;
 
-#main-message>.offer {
-    color: map.get($blueColor, $lightTheme);
-    font-family: cursive;
-    font-size: 30px;
-    font-weight: bold;
-}
+        .button {
+            background-color: map.get($bgColorMainMessageButton, $lightTheme);
+            border-radius: 20px;
+            color: map.get($colorMainMessageButton, $lightTheme);
+            font-family: $mainBoldFont;
+            padding: 15px;
+            width: 120px;
+        }
+    
+        .message {
+            font-size: 18px;
+        }
+    
+        .offer {
+            color: map.get($blueColor, $lightTheme);
+            font-family: cursive;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    
+        .slogan {
+            font-family: $mainBoldFont;
+            font-size: 40px;
+        }
+    }
 
-#main-message>.slogan {
-    font-family: $mainBoldFont;
-    font-size: 40px;
-}
+    .image-container {
+        height: 100%;
+        display: none;
 
-#main-message>.message {
-    font-size: 18px;
-}
-
-#main-message>.button {
-    background-color: map.get($bgColorMainMessageButton, $lightTheme);
-    border-radius: 20px;
-    color: map.get($colorMainMessageButton, $lightTheme);
-    font-family: $mainBoldFont;
-    padding: 15px;
-    width: 120px;
+        img {
+            height: 100%;
+        }
+    }
 }
