@@ -2,20 +2,26 @@
 
 @use "../main-message/sizes.scss" as main_message;
 @use "../list-categories/sizes.scss" as list_categories;
+@use "../list-products/sizes.scss" as list_products;
+@use "../rating/sizes.scss" as rating;
 
 @include small {
     @include main_message.small;
     @include list_categories.small;
+    @include list_products.small;
+    @include rating.small;
 }
 
 @include medium {
     @include main_message.medium;
     @include list_categories.medium;
+    @include list_products.medium;
 }
 
 @include large {
     @include main_message.large;
     @include list_categories.large;
+    @include list_products.large;
 }
 
 @include xlarge {

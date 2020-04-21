@@ -1,54 +1,63 @@
 @use "sass:map";
-@import "../globals/variables.scss";
-@import "../globals/mixins.scss";
-@import "./variables.scss";
+@use "../globals/variables.scss" as *;
+@use "../globals/mixins.scss" as *;
+@use "./variables.scss" as *;
 
 #list-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin: 20px 0 20px 0;
+    
+    .container-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        article {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            
+            .image {
+                @include aspectRatio($withProduct, $proportionProduct);
+                align-items: center;
+                background-color: map.get($bgColorProduct, $lightTheme);
+                border-radius: 10px;
+                display: flex;
+                max-width: 350px;
+                max-height: 350px;
+                justify-content: center;
+                
+                img {
+                    height: 100%;
+                }
+            }
+        
+            .info {
+                display: flex;
+                flex-direction: column;
+                
+                .name {
+                    padding: 10px 0 10px 0;
+                    text-align: center;
+                }
+        
+                .price {
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    padding: 10px 0 10px 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+    h2 {
+        font-family: $mainBoldFont;
+        font-size: 30px;
+        text-align: center;
+    }
 }
 
-#list-products>h2 {
-    font-family: $mainBoldFont;
-    font-size: 30px;
-    text-align: center;
-}
 
-#list-products>article {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
 
-#list-products>article>.image {
-    @include aspectRatio($withProduct, $proportionProduct);
-    align-items: center;
-    background-color: map.get($bgColorProduct, $lightTheme);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-}
 
-#list-products>article>.image>img {
-    height: 100%;
-}
 
-#list-products>article>.info {
-    display: flex;
-    flex-direction: column;
-}
-
-#list-products>article>.info>.name {
-    padding: 10px 0 10px 0;
-    text-align: center;
-}
-
-#list-products>article>.info>.price {
-    font-family: sans-serif;
-    font-weight: bold;
-    padding: 10px 0 10px 0;
-    text-align: center;
-}

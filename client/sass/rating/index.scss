@@ -1,39 +1,56 @@
 @use "sass:map";
-@import "../globals/variables.scss";
-@import "./variables.scss";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
 
-#list-products>article>.info>.rating {
-    text-align: center;
-    padding: 20px 0 10px 0;
-    font-weight: bold;
-    font-size: 18px;
-}
+#list-products {
+    article {
+        .info {
+            .rating {
+                text-align: center;
+                padding: 20px 0 10px 0;
+                font-weight: bold;
+                font-size: 18px;
 
-.rating::before {
-    color: map.get($colorActiveRatingStar, $lightTheme);
-}
+                &::before {
+                    color: map.get($colorActiveRatingStar, $lightTheme);
+                }
+            }
+            .rating-0 {
+                &::before {
+                    color: map.get($colorInactiveRatingStar, $lightTheme);
+                    content: "☆☆☆☆☆";
+                }
+            }
 
-.rating-0::before {
-    color: map.get($colorInactiveRatingStar, $lightTheme);
-    content: "☆☆☆☆☆";
-}
-
-.rating-1::before {
-    content: "★☆☆☆☆";
-}
-
-.rating-2::before {
-    content: "★★☆☆☆";
-}
-
-.rating-3::before {
-    content: "★★★☆☆";
-}
-
-.rating-4::before {
-    content: "★★★★☆";
-}
-
-.rating-5::before {
-    content: "★★★★★";
+            .rating-1 {
+                &::before {
+                    content: "★☆☆☆☆";
+                }
+            }
+            
+            .rating-2 {
+                &::before {
+                    content: "★★☆☆☆";
+                }
+            }
+            
+            .rating-3 {
+                &::before {
+                    content: "★★★☆☆";
+                }
+            }
+            
+            .rating-4 {
+                &::before {
+                    content: "★★★★☆";
+                }
+            }
+            
+            .rating-5 {
+                &::before {
+                    content: "★★★★★";
+                }
+            }
+        }
+    }
 }

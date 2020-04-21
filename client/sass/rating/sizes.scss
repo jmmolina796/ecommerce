@@ -1,0 +1,12 @@
+@mixin small {
+    #list-products {
+        article {
+            .info {
+                .rating {
+                    font-size: 20px;
+                    padding: 25px 0 10px 0;
+                }
+            }
+        }
+    }
+}
