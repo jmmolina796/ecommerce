@@ -1,61 +1,77 @@
 @use "sass:map";
-@import "../globals/variables.scss";
-@import "../globals/mixins.scss";
-@import "./variables.scss";
+@use "../globals/variables.scss"as *;
+@use "../globals/mixins.scss"as *;
+@use "./variables.scss"as *;
 
 #list-categories {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     margin: 20px 0 20px 0;
-}
 
-#list-categories>h2 {
-    font-size: 30px;
-    text-align: center;
-    font-family: $mainBoldFont;
-}
+    .container-categories {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 0 20px;
 
-#list-categories>article {
-    @include aspectRatio($withCategory, $proportionCategory);
-    border-radius: 10px;
-    background-color: map.get($bgColorOddCategory, $lightTheme);
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-}
+        article {
+            @include aspectRatio($withCategory, $proportionCategory);
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            max-width: 400px;
+            margin: 20px;
+            max-height: 242px;
+            
+            &:nth-child(odd) {
+                background-color: map.get($bgColorOddCategory, $lightTheme);
+            }
 
-#list-categories>article>.image {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+            &:nth-child(even) {
+                background-color: map.get($bgColorEvenCategory, $lightTheme);
+            }
 
-#list-categories>article>.image>img {
-    height: 100%;
-}
+            .image {
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
 
-#list-categories>article>.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    height: 100%;
-}
+                img {
+                    height: 100%;
+                }
+            }
 
-#list-categories>article>.info>.name {
-    font-size: 22px;
-    font-family: $mainBoldFont;
-    text-align: left;
-    margin-bottom: 3px;
-}
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-right: 15px;
+                height: 100%;
 
-#list-categories>article>.info>.offer {
-    background-color: map.get($bgColorCategoryOffer, $lightTheme);;
-    border-radius: 20px;
-    font-size: 14px;
-    margin-top: 3px;
-    padding: 5px 10px;
+                .name {
+                    font-size: 22px;
+                    font-family: $mainBoldFont;
+                    text-align: left;
+                    margin-bottom: 3px;
+                }
+
+                .offer {
+                    background-color: map.get($bgColorCategoryOffer, $lightTheme);
+                    ;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    margin-top: 3px;
+                    padding: 5px 10px;
+                }
+
+            }
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        font-family: $mainBoldFont;
+    }
 }

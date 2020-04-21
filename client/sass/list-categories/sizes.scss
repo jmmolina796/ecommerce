@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "../globals/variables.scss"as *;
+@use "../globals/mixins.scss"as *;
+@use "./variables.scss"as *;
+
+@mixin small {
+    #list-categories {
+        margin: 30px 0 30px 0;
+
+        .container-categories {
+
+            article {
+                border-radius: 10px;
+                max-width: 450px;
+                max-height: 273px;
+                
+                .info {
+                    margin-right: 30px;
+        
+                    .name {
+                        font-size: 25px;
+                        margin-bottom: 5px;
+                    }
+        
+                    .offer {
+                        font-size: 16px;
+                        margin-top: 5px;
+                        padding: 6px 11px;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+    }
+}
+
+@mixin medium {
+    #list-categories {
+        margin: 50px 0 50px 0;
+    }
+}
+
+@mixin large {
+    #list-categories {
+        margin: 80px 0 80px 0;
+    }
+}

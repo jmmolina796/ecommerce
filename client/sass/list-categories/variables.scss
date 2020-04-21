@@ -1,9 +1,11 @@
+@use "../globals/variables.scss" as *;
+
 $bgColorOddCategory: (
-    $lightTheme: #fed5dc
+    $lightTheme: rgb(250, 221, 228)
 );
 
 $bgColorEvenCategory: (
-    $lightTheme: #c0e9ff
+    $lightTheme: rgb(239, 245, 254)
 );
 
 $bgColorCategoryOffer: (

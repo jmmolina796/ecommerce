@@ -1,17 +1,21 @@
 @use "./mixins.scss" as *;
 
 @use "../main-message/sizes.scss" as main_message;
+@use "../list-categories/sizes.scss" as list_categories;
 
 @include small {
     @include main_message.small;
+    @include list_categories.small;
 }
 
 @include medium {
     @include main_message.medium;
+    @include list_categories.medium;
 }
 
 @include large {
     @include main_message.large;
+    @include list_categories.large;
 }
 
 @include xlarge {
