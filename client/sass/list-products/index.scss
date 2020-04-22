@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "../globals/variables.scss" as *;
-@use "../globals/mixins.scss" as *;
+@use "../globals/mixins/utils.scss" as *;
 @use "./variables.scss" as *;
 
 #list-products {

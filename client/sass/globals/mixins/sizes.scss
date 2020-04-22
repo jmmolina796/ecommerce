@@ -1,8 +1,3 @@
-@mixin aspectRatio($width, $proportion) {
-    height: calc(#{$width} * #{$proportion});
-    width: $width;
-}
-
 @mixin small {
     @media (min-width: 576px) {
         @content;

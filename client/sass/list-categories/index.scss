@@ -1,7 +1,7 @@
 @use "sass:map";
-@use "../globals/variables.scss"as *;
-@use "../globals/mixins.scss"as *;
-@use "./variables.scss"as *;
+@use "../globals/variables.scss" as *;
+@use "../globals/mixins/utils.scss" as *;
+@use "./variables.scss" as *;
 
 #list-categories {
     margin: 20px 0 20px 0;
