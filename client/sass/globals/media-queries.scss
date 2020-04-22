@@ -1,5 +1,7 @@
 @use "./mixins.scss" as *;
 
+@use "../header/sizes.scss" as header;
+@use "../nav/sizes.scss" as nav;
 @use "../main-message/sizes.scss" as main_message;
 @use "../list-categories/sizes.scss" as list_categories;
 @use "../list-products/sizes.scss" as list_products;
@@ -13,17 +15,21 @@
 }
 
 @include medium {
+    @include header.medium;
     @include main_message.medium;
     @include list_categories.medium;
     @include list_products.medium;
 }
 
 @include large {
+    @include header.large;
+    @include nav.large;
     @include main_message.large;
     @include list_categories.large;
     @include list_products.large;
 }
 
 @include xlarge {
+    @include nav.xlarge;
     @include main_message.xlarge;
 }

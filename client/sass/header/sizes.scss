@@ -1,0 +1,26 @@
+@mixin medium {
+    header {
+        h1 {
+            font-size: 45px;
+            margin-left: 40px;
+        }
+        
+        .icon_menu {
+            margin-right: 40px;
+        }
+    }
+}
+
+@mixin large {
+    header {
+        height: 90px;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .icon_menu {
+            display: none;
+        }
+    }  
+}

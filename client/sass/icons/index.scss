@@ -8,14 +8,14 @@
     height: 35px;
     justify-content: center;
     width: 35px;
-}
-
-.icon_menu::before {
-    background-color: map.get($colorMenu, $lightTheme);
-    border-radius: 10px;
-    box-shadow: 0px 10px 0px map.get($colorMenu,$lightTheme),
-                0px 20px 0px map.get($colorMenu, $lightTheme);
-    content: "";
-    height: 5px;
-    margin-top: calc(-40px/2);
+    
+    &::before {
+        background-color: map.get($colorMenu, $lightTheme);
+        border-radius: 10px;
+        box-shadow: 0px 10px 0px map.get($colorMenu,$lightTheme),
+                    0px 20px 0px map.get($colorMenu, $lightTheme);
+        content: "";
+        height: 5px;
+        margin-top: calc(-40px/2);
+    }
 }

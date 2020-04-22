@@ -14,9 +14,14 @@ nav {
     width: 90%;
 
     li {
+        cursor: pointer;
         font-size: 16px;
         margin: 0;
         list-style: none;
         padding: 20px 20px 20px 30px;
+
+        &:hover {
+            color: map.get($blueColor, $lightTheme);
+        }
     }
 }

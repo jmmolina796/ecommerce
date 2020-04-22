@@ -1,0 +1,25 @@
+@mixin large {
+    nav {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        left: 0;
+        padding-bottom: 0;
+        position: static;
+        top: 0;
+        transform: none !important;
+        transition: none;
+        height: 90px;
+        width: 50%;
+
+        li {
+            font-size: 18px;
+        }
+    } 
+}
+
+@mixin xlarge {
+    nav {
+        width: 40%;
+    }
+}
