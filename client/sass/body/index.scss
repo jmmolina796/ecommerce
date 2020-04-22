@@ -6,4 +6,14 @@ body {
     background-color: map.get($bgColorBody, $lightTheme);
     color: map.get($mainColor, $lightTheme);
     font-family: $mainFont;
+
+    a {
+        color: map.get($mainColor, $lightTheme);
+        cursor: pointer;
+        text-decoration: none;
+
+        &:active {
+            color: inherit;
+        }
+    }
 }

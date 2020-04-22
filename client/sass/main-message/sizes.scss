@@ -40,3 +40,39 @@
         }
     }
 }
+
+@mixin xlarge {
+    #main-message {
+        height: 760px;
+        align-items: center;
+
+        .message-container {
+            height: 550px;
+            width: 500px;
+
+            a {
+                border-radius: 30px;
+                width: 190px;
+            }
+    
+            .buy-now {
+                border-radius: 30px;
+                padding: 20px;
+                width: 150px;
+                font-size: 18px; 
+            }
+
+            .message {
+                font-size: 30px;
+            }
+        
+            .offer {
+                font-size: 45px;
+            }
+        
+            .slogan {
+                font-size: 75px;
+            }
+        }
+    }
+}
