@@ -1,7 +1,9 @@
 @mixin large {
     nav {
         align-items: center;
+        box-shadow: none;
         display: flex;
+        height: 90px;
         justify-content: space-evenly;
         left: 0;
         padding-bottom: 0;
@@ -9,7 +11,6 @@
         top: 0;
         transform: none !important;
         transition: none;
-        height: 90px;
         width: 50%;
 
         li {

@@ -4,12 +4,13 @@
 
 nav {
     background-color: map.get($bgColorNav, $lightTheme);
+    box-shadow: 0 10px 15px map.get($shadowColorNav, $lightTheme);
     left: 5%;
     padding-bottom: 10px;
     position: absolute;
     top: 100%;
-    transform: scaleY(0);
     transform-origin: 0 0;
+    transform: scaleY(0);
     transition: transform 0.2s;
     width: 90%;
 

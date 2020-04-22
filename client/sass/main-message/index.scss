@@ -6,6 +6,7 @@
     background-color: map.get($bgColorMainMessage, $lightTheme);
     display: flex;
     height: 350px;
+    margin-top: 70px;
     justify-content: flex-start;
     
     .message-container {

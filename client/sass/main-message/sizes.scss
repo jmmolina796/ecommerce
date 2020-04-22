@@ -25,6 +25,8 @@
 
 @mixin large {
     #main-message {
+        margin-top: 90px;
+
         .message-container {
             .message {
                 font-size: 23px;

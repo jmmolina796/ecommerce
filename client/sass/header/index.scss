@@ -4,10 +4,16 @@
 
 header {
     align-items: center;
+    background-color: map.get($bgColorHeader, $lightTheme);
+    box-shadow: 0 10px 15px map.get($shadowColorHeader, $lightTheme);
     display: flex;
     height: 70px;
     justify-content: space-between;
-    position: relative;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 
     h1 {
         color: map.get($colorHeaderH1, $lightTheme);
