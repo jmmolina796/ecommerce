@@ -1,0 +1,14 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+@mixin dark {
+    header {
+        background-color: map.get($bgColorHeader, $darkTheme);
+        box-shadow: 0 10px 15px map.get($shadowColorHeader, $darkTheme);
+    
+        h1 {
+            color: map.get($colorHeaderH1, $darkTheme);
+        }
+    }
+}

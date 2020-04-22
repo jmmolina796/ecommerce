@@ -1,7 +1,7 @@
 @mixin large {
     nav {
         align-items: center;
-        box-shadow: none;
+        box-shadow: none !important;
         display: flex;
         height: 90px;
         justify-content: space-evenly;

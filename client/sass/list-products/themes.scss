@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
+
+@mixin dark {
+    #list-products {
+        .container-products {
+            article {
+                .image {
+                    background-color: map.get($bgColorProduct, $darkTheme);
+                }
+            }
+        }
+    }
+}

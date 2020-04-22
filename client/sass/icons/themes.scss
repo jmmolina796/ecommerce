@@ -1,0 +1,14 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+@mixin dark {
+    .icon_menu {
+        
+        &::before {
+            background-color: map.get($colorMenu, $darkTheme);
+            box-shadow: 0px 10px 0px map.get($colorMenu,$darkTheme),
+                        0px 20px 0px map.get($colorMenu, $darkTheme);
+        }
+    }
+}

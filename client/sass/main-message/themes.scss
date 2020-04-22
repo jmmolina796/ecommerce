@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
+
+@mixin dark {
+    #main-message {
+        background-color: map.get($bgColorMainMessage, $darkTheme);
+
+        .message-container {
+
+            .buy-now {
+                color: map.get($colorMainMessageButton, $darkTheme);
+                background-color: map.get($bgColorMainMessageButton, $darkTheme);
+            }
+
+            .offer {
+                color: map.get($blueColor, $darkTheme);
+            }
+        }
+    }
+}

@@ -1,7 +1,11 @@
+@use "sass:map";
+
 $shadowColorNav: (
-    $lightTheme: rgba(25, 25, 25, 0.1)
+    $lightTheme: rgba(25, 25, 25, 0.1),
+    $darkTheme: rgba(225, 225, 225, 0.1),
 );
 
 $bgColorNav: (
-    $lightTheme: #fff
+    $lightTheme: #fff,
+    $darkTheme: #000
 );

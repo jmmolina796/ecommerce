@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
+
+@mixin dark {
+    #list-categories {
+            
+        .container-categories {
+    
+            article {
+                
+                &:nth-child(odd) {
+                    background-color: map.get($bgColorOddCategory, $darkTheme);
+                }
+    
+                &:nth-child(even) {
+                    background-color: map.get($bgColorEvenCategory, $darkTheme);
+                }
+
+                .info {
+    
+                    .offer {
+                        background-color: map.get($bgColorCategoryOffer, $darkTheme);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use "sass:map";
+@import "../globals/variables.scss";
+@import "./variables.scss";
+
+@mixin dark {
+    nav {
+        background-color: map.get($bgColorNav, $darkTheme);
+        box-shadow: 0 10px 15px map.get($shadowColorNav, $darkTheme);
+    
+        li {
+
+            &:hover {
+                color: map.get($blueColor, $darkTheme);
+            }
+        }
+    }
+}

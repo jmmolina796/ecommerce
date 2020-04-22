@@ -1,11 +1,13 @@
 $lightTheme: "light";
+$darkTheme: "dark";
 
 $mainFont: "playfair", serif;
 $mainBoldFont: "playfair-bold", serif;
 $secondaryFont: cursive;
 
 $mainColor: (
-    $lightTheme: #000
+    $lightTheme: #000,
+    $darkTheme: #fff
 );
 
 $secondaryColor: (
@@ -13,5 +15,6 @@ $secondaryColor: (
 );
 
 $blueColor: (
-    $lightTheme: #2577fd
+    $lightTheme: #2577fd,
+    $darkTheme: lighten(#2577fd, 15%)
 );

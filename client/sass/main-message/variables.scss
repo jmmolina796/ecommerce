@@ -1,13 +1,16 @@
 @use "../globals/variables.scss" as *;
 
 $bgColorMainMessage: (
-    $lightTheme: #c0e9ff
+    $lightTheme: #c0e9ff,
+    $darkTheme: darken(#c0e9ff, 60%)
 );
 
 $bgColorMainMessageButton: (
-    $lightTheme: #2577fd
+    $lightTheme: #2577fd,
+    $darkTheme: darken(#2577fd, 5%)
 );
 
 $colorMainMessageButton: (
-    $lightTheme: #fff
+    $lightTheme: #fff,
+    $darkTheme: #fff
 );

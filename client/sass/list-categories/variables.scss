@@ -1,15 +1,18 @@
 @use "../globals/variables.scss" as *;
 
 $bgColorOddCategory: (
-    $lightTheme: rgb(250, 221, 228)
+    $lightTheme: rgb(250, 221, 228),
+    $darkTheme: darken(rgb(250, 221, 228), 60%)
 );
 
 $bgColorEvenCategory: (
-    $lightTheme: rgb(239, 245, 254)
+    $lightTheme: rgb(239, 245, 254),
+    $darkTheme: darken(rgb(239, 245, 254), 60%)
 );
 
 $bgColorCategoryOffer: (
-    $lightTheme: #ffbc07
+    $lightTheme: #ffbc07,
+    $darkTheme: darken(#ffbc07, 15%)
 );
 
 $proportionCategory: 20/33;

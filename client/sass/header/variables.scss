@@ -1,11 +1,14 @@
 $bgColorHeader: (
-    $lightTheme: #fff
+    $lightTheme: #fff,
+    $darkTheme: #000
 );
 
 $shadowColorHeader: (
-    $lightTheme: rgba(25, 25, 25, 0.1)
+    $lightTheme: rgba(25, 25, 25, 0.1),
+    $darkTheme: rgba(225, 225, 225, 0.1)
 );
 
 $colorHeaderH1: (
-    $lightTheme: #000
+    $lightTheme: #000,
+    $darkTheme: #fff
 );
