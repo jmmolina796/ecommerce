@@ -4,6 +4,7 @@ $darkTheme: "dark";
 $mainFont: "playfair", serif;
 $mainBoldFont: "playfair-bold", serif;
 $secondaryFont: cursive;
+$ternaryFont: "Poppins", sans-serif;
 
 $mainColor: (
     $lightTheme: #000,
@@ -17,4 +18,9 @@ $secondaryColor: (
 $blueColor: (
     $lightTheme: #2577fd,
     $darkTheme: lighten(#2577fd, 15%)
+);
+
+$redColor: (
+    $lightTheme: #ff003c,
+    $darkTheme: lighten(#ff003c, 15%)
 );
