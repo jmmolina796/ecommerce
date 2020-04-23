@@ -2,7 +2,17 @@
 
 $bgColorProduct: (
     $lightTheme: #f7f7f7,
-    $darkTheme: darken(#f7f7f7, 80%),
+    $darkTheme: darken(#f7f7f7, 80%)
+);
+
+$bgColorProductPercentage: (
+    $lightTheme: #ff003c,
+    $darkTheme: darken(#ff003c, 10%)
+);
+
+$colorProductPercentage: (
+    $lightTheme: #fff,
+    $darkTheme: darken(#fff, 5%)
 );
 
 $proportionProduct: 1;

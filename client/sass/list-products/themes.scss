@@ -6,6 +6,14 @@
     #list-products {
         .container-products {
             article {
+                &.disccount {
+                    .image {
+                        .percentage {
+                            background-color: map.get($bgColorProductPercentage, $darkTheme);
+                            color: map.get($colorProductPercentage, $darkTheme);
+                        }
+                    }
+                }
                 .image {
                     background-color: map.get($bgColorProduct, $darkTheme);
                 }

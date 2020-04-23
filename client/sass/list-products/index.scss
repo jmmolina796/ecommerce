@@ -16,6 +16,49 @@
             flex-direction: column;
             margin: 20px;
             
+            &.disccount {
+                
+                .image {
+                    position: relative;
+
+                    .percentage {
+                        align-items: center;
+                        background-color: map.get($bgColorProductPercentage, $lightTheme);
+                        border-radius: 20px;
+                        color: map.get($colorProductPercentage, $lightTheme);
+                        display: block;
+                        display: flex;
+                        font-family: $ternaryFont;
+                        font-size: 16px;
+                        justify-content: center;
+                        left: 15px;
+                        padding: 6px 13px;
+                        position: absolute;
+                        top: 15px;
+                    }
+                }
+
+                .info {
+
+                    .price {
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+
+                        .offer {
+                            display: block;
+                            margin-right: 12px;
+                        }
+
+                        .original {
+                            margin-left: 12px;
+                            color: map.get($redColor, $lightTheme);
+                            text-decoration: line-through;
+                        }
+                    }
+                } 
+            }
+            
             .image {
                 @include aspectRatio($withProduct, $proportionProduct);
                 align-items: center;
@@ -29,6 +72,10 @@
                 img {
                     height: 100%;
                 }
+
+                .percentage {
+                    display: none;
+                }
             }
         
             .info {
@@ -36,15 +83,21 @@
                 flex-direction: column;
                 
                 .name {
+                    font-size: 18px;
                     padding: 10px 0 10px 0;
                     text-align: center;
                 }
-        
+                
                 .price {
-                    font-family: sans-serif;
+                    font-family: $ternaryFont;
+                    font-size: 18px;
                     font-weight: bold;
                     padding: 10px 0 10px 0;
                     text-align: center;
+
+                    .offer {
+                        display: none;
+                    }
                 }
             }
         }
