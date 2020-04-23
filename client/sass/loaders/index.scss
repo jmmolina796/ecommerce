@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
+
+.loader {
+    animation: load 1.4s infinite linear;
+    background: map.get($colorLoader, $lightTheme);
+    background: linear-gradient(to right, map.get($colorLoader, $lightTheme) 10%, map.get($bgColorLoader, $lightTheme) 42%);
+    border-radius: 50%;
+    font-size: 10px;
+    height: 11em;
+    margin: 50px auto;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    width: 11em;
+
+    &::after {
+        background: map.get($bgColorLoader, $lightTheme);
+        border-radius: 50%;
+        bottom: 0;
+        content: '';
+        height: 75%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 75%;
+    }
+
+    &::before {
+        background: map.get($colorLoader, $lightTheme);
+        border-radius: 100% 0 0 0;
+        content: '';
+        height: 50%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

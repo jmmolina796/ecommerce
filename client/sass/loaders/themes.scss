@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../globals/variables.scss" as *;
+@use "./variables.scss" as *;
+
+@mixin dark {
+
+    .loader {
+        background: map.get($colorLoader, $darkTheme);
+        background: linear-gradient(to right, map.get($colorLoader, $darkTheme) 10%, map.get($bgColorLoader, $darkTheme) 42%);
+    
+        &::after {
+            background: map.get($bgColorLoader, $darkTheme);
+        }
+    
+        &::before {
+            background: map.get($colorLoader, $darkTheme);
+        }
+    }
+    
+}

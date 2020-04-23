@@ -1,0 +1,11 @@
+@use "../globals/variables.scss" as *;
+
+$colorLoader: (
+    $lightTheme: #000,
+    $darkTheme: #fff
+);
+
+$bgColorLoader: (
+    $lightTheme: #fff,
+    $darkTheme: #000
+);

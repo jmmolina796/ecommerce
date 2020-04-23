@@ -7,6 +7,7 @@
 @use "../main-message/themes.scss" as main_message;
 @use "../list-categories/themes.scss" as list_categories;
 @use "../list-products/themes.scss" as list_products;
+@use "../loaders/themes.scss" as loaders;
 
 @include dark {
     @include body.dark;
@@ -16,4 +17,5 @@
     @include main_message.dark;
     @include list_categories.dark;
     @include list_products.dark;
+    @include loaders.dark;
 }
