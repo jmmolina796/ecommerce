@@ -11,6 +11,18 @@
         flex-wrap: wrap;
         justify-content: center;
 
+        &.loading {
+            
+            > article {
+                display: none;
+            }
+
+            .loader {
+                display: block;
+            }
+
+        }
+
         article {
             display: flex;
             flex-direction: column;
@@ -100,6 +112,10 @@
                     }
                 }
             }
+        }
+        
+        .loader {
+            display: none;
         }
     }
     
