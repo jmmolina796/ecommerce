@@ -23,16 +23,16 @@
         }
 
         .buy-now {
-            color: map.get($colorMainMessageButton, $lightTheme);
             background-color: map.get($bgColorMainMessageButton, $lightTheme);
             border-radius: 20px;
             border: none;
-            cursor: pointer;
             box-sizing: content-box;
-            font-family: $mainBoldFont;
+            color: map.get($colorMainMessageButton, $lightTheme);
+            cursor: pointer;
+            font-family: $ternaryFont;
             outline: none;
             padding: 15px;
-            width: 120px;   
+            width: 130px;   
         }
     
         .message {

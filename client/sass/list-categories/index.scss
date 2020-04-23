@@ -59,11 +59,11 @@
                 .offer {
                     background-color: map.get($bgColorCategoryOffer, $lightTheme);
                     border-radius: 20px;
-                    font-size: 14px;
+                    font-family: $ternaryFont;
+                    font-size: 12px;
                     margin-top: 3px;
                     padding: 5px 10px;
                 }
-
             }
         }
     }
