@@ -19,19 +19,12 @@ const options = {
     publicUrl: '/'
 };
 
-app.use('/',express.static(baseDistPath));
+app.use('/', express.static(baseDistPath));
 
-const parcel_middleware = new Bundler(file, options).middleware();
+const parcelBundler = new Bundler(file, options);
+parcelBundler.middleware();
 
 app.use('/api/products', products);
-
-app.use('/', (req, res, next) => {
-    if(req.url === "/") {
-        parcel_middleware(req, res, next);
-    } else {
-        next();
-    }
-});
 
 app.listen(port, () => {
     console.log(`App running at port: ${port}`);
