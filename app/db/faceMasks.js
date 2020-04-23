@@ -1,0 +1,94 @@
+const faceMasks = [
+    {
+        "name": "Radianzze Cubrebocas 2pz",
+        "originalPrice": "338.00",
+        "discountPrice": "99.00",
+        "savings": "289.00",
+        "rating": "4",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71VqzYdg9vL._AC_SX679_.jpg",
+        "url": "https://amzn.to/3cD8d71"
+    },
+    {
+        "name": "HET Cubrebocas 100% Poliester 5pz",
+        "originalPrice": "999.99",
+        "discountPrice": "249.00",
+        "savings": "750.99",
+        "rating": "4",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61DrchVebvL._AC_SX679_.jpg",
+        "url": "https://amzn.to/2yAlCOA"
+    },
+    {
+        "name": "The Deals Store Paquete de 6 Cubrebocas",
+        "originalPrice": "599.0",
+        "discountPrice": "299.00",
+        "savings": "300.00",
+        "rating": "3",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41JLqBTVQYL._AC_.jpg",
+        "url": "https://amzn.to/2Kqdl2h"
+    },
+    {
+        "name": "Bonalto Paquete de 25 Cubrebocas",
+        "originalPrice": "439.00",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "3",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/515hiGVygqL._AC_SX679_.jpg",
+        "url": "https://amzn.to/2S0BUXN"
+    },
+    {
+        "name": "Generico Paquete de Cubrebocas 50pz",
+        "originalPrice": "629.00",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "2",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51HI2urLVYL._AC_SX679_.jpg",
+        "url": "https://amzn.to/2xFRZLH"
+    },
+    {
+        "name": "Idea Basics 20 Piezas Tapabocas",
+        "originalPrice": "299.00",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "1",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/31xaSI1a6bL._AC_.jpg",
+        "url": "https://amzn.to/3eIMJaK"
+    },
+    {
+        "name": "Paquete de 10 Piezas Cubrebocas",
+        "originalPrice": "839.00",
+        "discountPrice": "449.00",
+        "savings": "390.00",
+        "rating": "1",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/61yKgwe-76L._AC_SX679_.jpg",
+        "url": "https://amzn.to/358ESyZ"
+    },
+    {
+        "name": "MJ7 Cubrebocas Tapabocas 2pz",
+        "originalPrice": "187.00",
+        "discountPrice": "157.00",
+        "savings": "30.00",
+        "rating": "1",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/71fOBdKj4lL._AC_SX679_.jpg",
+        "url": "https://amzn.to/2VUkpte"
+    },
+    {
+        "name": "Plydex Paquete 50 Piezas Cubrebocas",
+        "originalPrice": "248.50",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "3",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41Ecl%2Bymc6L._AC_.jpg",
+        "url": "https://amzn.to/3bwJMIk"
+    },
+    {
+        "name": "100 piezas Cubrebocas Desechable",
+        "originalPrice": "999.00",
+        "discountPrice": "549.00",
+        "savings": "450.00",
+        "rating": "1",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/51xajm-S4nL._AC_SX679_.jpg",
+        "url": "https://amzn.to/34W3dYF"
+    }
+];
+
+module.exports = faceMasks;
