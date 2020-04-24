@@ -30,7 +30,7 @@
             
             &.disccount {
                 
-                .image {
+                .image-container {
                     position: relative;
 
                     .percentage {
@@ -71,18 +71,24 @@
                 } 
             }
             
-            .image {
+            .image-container {
                 @include aspectRatio($withProduct, $proportionProduct);
                 align-items: center;
                 background-color: map.get($bgColorProduct, $lightTheme);
                 border-radius: 10px;
+                border: 1px solid map.get($borderColorProduct, $lightTheme);;
                 display: flex;
-                max-width: 350px;
-                max-height: 350px;
                 justify-content: center;
+                max-height: 350px;
+                max-width: 350px;
+                overflow: hidden;
                 
-                img {
+                .image {
                     height: 100%;
+                    width: 100%;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                 }
 
                 .percentage {
@@ -96,8 +102,13 @@
                 
                 .name {
                     font-size: 18px;
+                    width: $withProduct;
+                    max-width: 350px;
+                    overflow: hidden;
                     padding: 10px 0 10px 0;
                     text-align: center;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
                 }
                 
                 .price {
@@ -111,6 +122,10 @@
                         display: none;
                     }
                 }
+            }
+            
+            .promoted-link {
+                display: inline-block;
             }
         }
         

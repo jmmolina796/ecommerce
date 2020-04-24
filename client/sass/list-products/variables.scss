@@ -1,8 +1,8 @@
 @use "../globals/variables.scss" as *;
 
 $bgColorProduct: (
-    $lightTheme: #f7f7f7,
-    $darkTheme: darken(#f7f7f7, 80%)
+    $lightTheme: #fff,
+    $darkTheme: #fff
 );
 
 $bgColorProductPercentage: (
@@ -13,6 +13,11 @@ $bgColorProductPercentage: (
 $colorProductPercentage: (
     $lightTheme: #fff,
     $darkTheme: darken(#fff, 5%)
+);
+
+$borderColorProduct: (
+    $lightTheme: #ccc,
+    $darkTheme: lighten(#ccc, 5%)
 );
 
 $proportionProduct: 1;

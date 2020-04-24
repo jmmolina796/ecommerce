@@ -7,15 +7,16 @@
         .container-products {
             article {
                 &.disccount {
-                    .image {
+                    .image-container {
                         .percentage {
                             background-color: map.get($bgColorProductPercentage, $darkTheme);
                             color: map.get($colorProductPercentage, $darkTheme);
                         }
                     }
                 }
-                .image {
+                .image-container {
                     background-color: map.get($bgColorProduct, $darkTheme);
+                    border: 1px solid map.get($borderColorProduct, $darkTheme);
                 }
             }
         }
