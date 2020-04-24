@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { getUrl } = require('../utils');
-const products = require('../db');
+const products = require('../db/products');
 
 const urls = Object.keys(products).map(v => `/${v}`);
 
