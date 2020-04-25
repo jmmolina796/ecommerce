@@ -1,33 +1,39 @@
 const categories = [
     {
+        "name": "face_masks",
         "title": "Cubrebocas",
         "message": "Nueva colección",
-        "image": ""
+        "imageName": "cuberbocas"
     },
     {
-        "title": "Gel antibacterial",
+        "name": "antibacterial_gels",
+        "title": "Gel antiséptico",
         "message": "Nueva colección",
-        "image": ""
+        "imageName": "cuberbocas"
     },
+    // {
+        // "name": "face_masks",
+    //     "title": "Papel higiénico",
+    //     "message": "Nueva colección",
+    //     "imageName": "cuberbocas"
+    // },
     {
-        "title": "Papel higiénico",
+        "name": "gloves",
+        "title": "Guantes",
         "message": "Nueva colección",
-        "image": ""
+        "imageName": "cuberbocas"
     },
     {
-        "title": "Guantes desechables",
-        "message": "Nueva colección",
-        "image": ""
-    },
-    {
+        "name": "disinfectants",
         "title": "Desinfectantes",
         "message": "Nueva colección",
-        "image": ""
+        "imageName": "cuberbocas"
     },
     {
-        "title": "Protectores faciales",
+        "name": "face_shields",
+        "title": "Protectores",
         "message": "Nueva colección",
-        "image": ""
+        "imageName": "cuberbocas"
     },
 ];
 
