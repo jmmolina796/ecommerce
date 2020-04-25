@@ -1,26 +1,38 @@
 @mixin large {
     nav {
-        align-items: center;
         box-shadow: none !important;
-        display: flex;
         height: 90px;
-        justify-content: space-evenly;
         left: 0;
         padding-bottom: 0;
         position: static;
         top: 0;
         transform: none !important;
         transition: none;
-        width: 50%;
+        width: 70%;
+        
+        ul {
+            height: 90px;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
 
-        li {
-            font-size: 18px;
+            li {
+                padding:  10px;
+            }
         }
+
     } 
 }
 
 @mixin xlarge {
     nav {
-        width: 40%;
+        width: 70%;
+
+        ul {
+            li {
+                font-size: 17px;
+            }
+        }
+
     }
 }
