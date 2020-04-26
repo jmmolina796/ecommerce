@@ -9,7 +9,7 @@ const categoryTemplate = ({
 }) => (`
     <article class="go-category" data-name="${name}">
         <div class="image">
-            <img src="${categoryImages[imageName]}" alt="ok">
+            <img class="lazyload" src="${categoryImages[imageName]}" alt="ok">
         </div>
         <div class="info">
             <div class="name">${title}</div>

@@ -13,7 +13,7 @@ const productTemplate = ({
         <a class="promoted-link" href="${url}">
         <div class="image-container">
             <div class="percentage">-${getDiscountPercentage(originalPrice, discountPrice)}%</div>
-            <div class="image" style="background-image: url('${image}')"></div>
+            <div class="image lazyload" style="background-image: url('${image}')"></div>
         </div>
         <div class="info">
             <div class="rating rating-${rating ? rating : 0 }"></div>

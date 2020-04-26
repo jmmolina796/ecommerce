@@ -1,3 +1,5 @@
+import 'lazysizes';
+
 import '../sass';
 
 import './main-menu';
