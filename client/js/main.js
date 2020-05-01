@@ -1,13 +1,22 @@
 import { getUrlPath } from './utils';
 
+import listCategories from './list-categories';
 import listProducts from './list-products';
-import './list-categories';
 
-const lastPath = getUrlPath(-1);
 const defaultProducts = 'cubrebocas';
 
-if (lastPath) {
-    listProducts(lastPath);
-} else {
-    listProducts(defaultProducts);
-}
+listCategories()
+    .then((categories) => {
+        const categoriesUrls = categories.map(c => c.url);
+
+        const lastPath = getUrlPath(-1);
+        
+        if (categoriesUrls.includes(lastPath)) {
+            listProducts(lastPath);
+        } else {
+            listProducts(defaultProducts);
+        }
+    })
+    .catch((err) => {
+        listProducts(defaultProducts);
+    });

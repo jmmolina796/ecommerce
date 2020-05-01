@@ -8,13 +8,6 @@ import listProducts from './list-products';
 const $container_categories = $(".container-categories");
 const $nav = $("nav ul");
 
-const addClick = function() {
-    const type = this.getAttribute('data-name');
-    const name = this.querySelector(".name").textContent;
-    const scroll = true;
-    listProducts(type, name, scroll);
-};
-
 const listCategories = async () => {
     const { result, error } = await getCategories();
     if (error) {
@@ -31,7 +24,8 @@ const listCategories = async () => {
         const category = categoryTemplate(v);
         $container_categories.innerHTML += category;
     });
-    
+
+    return result;
 };
 
-listCategories();
+export default listCategories;
