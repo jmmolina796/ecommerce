@@ -7,7 +7,7 @@ const categoryTemplate = ({
     message,
     imageName,
 }) => (`
-    <article class="go-category">
+    <article>
         <a href="/${url}">
             <div class="image">
                 <img class="lazyload" src="${categoryImages[imageName]}" alt="ok">
