@@ -9,8 +9,8 @@ const categoryTemplate = ({
 }) => (`
     <article>
         <a href="/${url}">
-            <div class="image">
-                <img class="lazyload" src="${categoryImages[imageName]}" alt="ok">
+            <div class="image-container">
+                <div class="image lazyload" style="background-image: url('${categoryImages[imageName]}')"></div>
             </div>
             <div class="info">
                 <div class="name">${title}</div>

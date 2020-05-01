@@ -29,8 +29,6 @@
             @include aspectRatio($withCategory, $proportionCategory);
             border-radius: 10px;
             cursor: pointer;
-            display: flex;
-            justify-content: flex-end;
             margin: 20px;
             max-height: 242px;
             max-width: 400px;
@@ -39,29 +37,42 @@
             &:nth-child(odd) {
                 background-color: map.get($bgColorOddCategory, $lightTheme);
             }
-
+            
             &:nth-child(even) {
                 background-color: map.get($bgColorEvenCategory, $lightTheme);
             }
-
-            .image {
+            
+            a {
+                display: flex;
                 height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
+                justify-content: flex-end;
+                width: 100%;
+            }
 
-                img {
+            .image-container {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                right: 0;
+                width: 50%;
+
+                .image {
                     height: 100%;
+                    width: 100%;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
                 }
             }
 
             .info {
+                align-items: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-right: 15px;
                 height: 100%;
+                justify-content: center;
+                margin-right: 15px;
+                z-index: 2;
 
                 .name {
                     font-size: 22px;
