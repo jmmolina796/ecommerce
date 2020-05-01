@@ -1,4 +1,3 @@
-import { capitalize } from '../utils';
 import categoryImages from '../../assets/categories/*.png';
 
 const categoryTemplate = ({
@@ -8,7 +7,7 @@ const categoryTemplate = ({
     imageName,
 }) => (`
     <article>
-        <a href="/${url}">
+        <a href="/${url}" class="goToUrl">
             <div class="image-container">
                 <div class="image lazyload" style="background-image: url('${categoryImages[imageName]}')"></div>
             </div>

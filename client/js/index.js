@@ -6,3 +6,5 @@ import './main-menu';
 import './main-message';
 
 import './main';
+
+import './historyApi';

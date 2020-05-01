@@ -1,3 +1,5 @@
+import listProducts from './list-products';
+
 export const $ = el => document.querySelector(el);
 export const $all = el => document.querySelectorAll(el);
 export const $$ = (el, event, callback) => $(el).addEventListener(event, callback);
@@ -42,3 +44,13 @@ export const getUrlPath = position => {
         return pathArray[position];
     }
 };
+
+export function goToUrl(event) {
+    const url = this.href
+    window.history.pushState(null, null, url);
+    
+    const lastPath = getUrlPath(-1);
+    listProducts(lastPath, true);
+
+    event.preventDefault();
+}

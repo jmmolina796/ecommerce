@@ -3,9 +3,9 @@ import { getProducts } from './api/products';
 import { $ } from './utils';
 import { scrollTo } from './utils';
 
-const $container_products = $(".container-products");
-
 const listProducts = async (type, scroll = false) => {
+    
+    const $container_products = $(".container-products");
 
     if (scroll) {
         scrollTo($("#products-title"));

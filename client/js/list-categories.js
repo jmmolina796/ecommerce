@@ -1,9 +1,7 @@
 import categoryTemplate from './templates/category';
 import navItemTemplate from './templates/navItem';
 import { getCategories } from './api/categories';
-import { $, $all, $$ } from './utils';
-
-import listProducts from './list-products';
+import { $, $all, goToUrl } from './utils';
 
 const $container_categories = $(".container-categories");
 const $nav = $("nav ul");
@@ -23,6 +21,10 @@ const listCategories = async () => {
 
         const category = categoryTemplate(v);
         $container_categories.innerHTML += category;
+    });
+
+    $all('.goToUrl').forEach((el) => {
+        el.addEventListener('click', goToUrl);
     });
 
     return result;
