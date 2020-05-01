@@ -5,20 +5,21 @@ import { scrollTo } from './utils';
 
 const $container_products = $(".container-products");
 
-const listProducts = async (type, name, scroll = false) => {
+const listProducts = async (type, scroll = false) => {
 
     if (scroll) {
         scrollTo($("#products-title"));
     }
 
     $container_products.classList.add("loading");
-    $("#products-title").textContent = name;
-
+    
     const { result, error } = await getProducts(type);
     if (error) {
         console.log(error);
         return;
     }
+    
+    $("#products-title").textContent = result["titleCategory"];
 
     while ($container_products.lastElementChild.className !== 'loader') {
         $container_products.removeChild($container_products.lastChild);
@@ -26,7 +27,7 @@ const listProducts = async (type, name, scroll = false) => {
     
     $container_products.classList.remove("loading");
     
-    result.forEach(v => {
+    result.products.forEach(v => {
         const product = productTemplate(v);
         $container_products.innerHTML += product;
     });

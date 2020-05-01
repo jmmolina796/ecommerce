@@ -31,4 +31,14 @@ export const scrollTo = (element) => {
         left: 0,
         top: element.offsetTop - ($("header").offsetHeight + 30)
     });
-}
+};
+
+export const getUrlPath = position => {
+    const path = window.location.pathname.substring(1);
+    const pathArray = path.split("/");
+    if (position === -1) {
+        return pathArray[pathArray.length - 1];
+    } else {
+        return pathArray[position];
+    }
+};

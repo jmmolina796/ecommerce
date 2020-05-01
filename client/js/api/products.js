@@ -1,7 +1,7 @@
 import { baseUrl } from './config';
 
 export const getProducts = (type) => ( 
-    fetch(`api/products/${type}`)
+    fetch(`/api/products/${type}`)
         .then(data => (
             data.json()
         ))

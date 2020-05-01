@@ -1,7 +1,7 @@
 import { baseUrl } from './config';
 
 export const getCategories = () => ( 
-    fetch('api/categories')
+    fetch('/api/categories')
         .then(data => (
             data.json()
         ))

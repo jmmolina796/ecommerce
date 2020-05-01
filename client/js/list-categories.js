@@ -25,31 +25,13 @@ const listCategories = async () => {
     $container_categories.classList.remove("loading");
 
     result.forEach(v => {
-        const li = navItemTemplate(v.name, v.title);
+        const li = navItemTemplate(v.url, v.title);
         $nav.innerHTML += li;
 
         const category = categoryTemplate(v);
         $container_categories.innerHTML += category;
     });
     
-    $all(".go-category").forEach(v => {
-        v.addEventListener('click', function() {
-            const type = this.getAttribute('data-name');
-            const name = this.querySelector(".name").textContent;
-            const scroll = true;
-            listProducts(type, name, scroll);
-        });
-    });
-
-    $all("nav li").forEach(v => {
-        v.addEventListener('click', function() {
-            const type = this.getAttribute('data-name');
-            const name = this.textContent;
-            const scroll = true;
-            listProducts(type, name, scroll);
-        });
-    });
-
 };
 
 listCategories();

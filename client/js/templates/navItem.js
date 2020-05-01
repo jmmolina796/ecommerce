@@ -1,5 +1,5 @@
 import { capitalize } from '../utils';
 
-const navItemTemplate = (name, title) => `<li class="go-category" data-name="${name}">${capitalize(title)}</li>`;
+const navItemTemplate = (url, title) => `<li class="go-category"><a href="/${url}">${capitalize(title)}</a></li>`;
 
 export default navItemTemplate;
