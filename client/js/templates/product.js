@@ -10,7 +10,7 @@ const productTemplate = ({
     url
 }) => (`
     <article ${ discountPrice ? 'class="disccount"' : '' } >
-        <a class="promoted-link" href="${url}">
+        <a class="promoted-link" href="${url}" target="_blank">
         <div class="image-container">
             <div class="percentage">-${getDiscountPercentage(originalPrice, discountPrice)}%</div>
             <div class="image lazyload" style="background-image: url('${image}')"></div>
