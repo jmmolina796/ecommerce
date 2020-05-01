@@ -1,39 +1,52 @@
+const antibacterialGels = require('./products/antibacterialGels');
+const disinfectants = require('./products/disinfectants');
+const faceMasks = require('./products/faceMasks');
+const faceShields = require('./products/faceShields');
+const gloves = require('./products/gloves');
+const toiletPaper = require('./products/toiletPaper');
+
 const categories = [
     {
-        "name": "face_masks",
         "title": "Cubrebocas",
+        "url": "cubrebocas",
         "message": "Nueva colección",
-        "imageName": "cubrebocas"
+        "imageName": "cubrebocas",
+        "products": faceMasks
     },
     {
-        "name": "antibacterial_gels",
         "title": "Gel antiséptico",
+        "url": "gel_antibacterial",
         "message": "Nueva colección",
-        "imageName": "gel"
+        "imageName": "gel",
+        "products": antibacterialGels
     },
     {
-        "name": "toilet_paper",
         "title": "Papel higiénico",
+        "url": "papel_higienico",
         "message": "Nueva colección",
-        "imageName": "papel"
+        "imageName": "papel",
+        "products": toiletPaper
     },
     {
-        "name": "gloves",
         "title": "Guantes",
+        "url": "guantes",
         "message": "Nueva colección",
-        "imageName": "guantes"
+        "imageName": "guantes",
+        "products": gloves
     },
     {
-        "name": "disinfectants",
         "title": "Desinfectantes",
+        "url": "desinfectantes",
         "message": "Nueva colección",
-        "imageName": "desinfectantes"
+        "imageName": "desinfectantes",
+        "products": disinfectants
     },
     {
-        "name": "face_shields",
         "title": "Protectores",
+        "url": "protectores_faciales",
         "message": "Nueva colección",
-        "imageName": "protector"
+        "imageName": "protector",
+        "products": faceShields
     },
 ];
 
