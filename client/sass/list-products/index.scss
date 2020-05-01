@@ -101,14 +101,17 @@
                 flex-direction: column;
                 
                 .name {
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    flex-basis: 30px;
                     font-size: 18px;
-                    width: $withProduct;
                     max-width: 350px;
                     overflow: hidden;
-                    padding: 10px 0 10px 0;
+                    padding: 20px 0 10px 0;
                     text-align: center;
-                    text-overflow:ellipsis;
-                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: $withProduct;
                 }
                 
                 .price {
