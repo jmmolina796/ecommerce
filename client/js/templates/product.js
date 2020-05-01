@@ -15,8 +15,7 @@ const productTemplate = ({
             <div class="percentage">-${getDiscountPercentage(originalPrice, discountPrice)}%</div>
             <div class="image lazyload" style="background-image: url('${image}')"></div>
         </div>
-        <div class="info">
-            <div class="rating rating-${rating ? rating : 0 }"></div>
+        <div class="info"> 
             <div class="name">${capitalize(name)}</div>
             <div class="price">
                 <div class="offer">${ discountPrice ? discountPrice : '' }</div>
@@ -26,6 +25,5 @@ const productTemplate = ({
         </a>
     </article>
 `);
-
 
 export default productTemplate;
