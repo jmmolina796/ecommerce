@@ -6,10 +6,12 @@ services:
         ports: 
             - "3000:80"
         volumes:
-            - ./server:/var/www/html/
+            - ./server:/var/www/
     ecommerce_client:
         build: ./client
         image: ecommerce_client_image
+        ports:
+            - "1234:1234"
         volumes:
             - ./:/usr/src
             - ecommerce_client_node_modules:/usr/src/client/node_modules
