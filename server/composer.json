@@ -1,0 +1,13 @@
+{
+    "name": "joseph/server",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jose Manuel",
+            "email": "jmanuelme@icloud.com"
+        }
+    ],
+    "require": {
+        "izniburak/router": "^1.5"
+    }
+}
