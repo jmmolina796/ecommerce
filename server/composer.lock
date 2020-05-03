@@ -4,55 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19491ab9b81a8ab22aed71c99fab3599",
+    "content-hash": "40bf0d800c0a1d87adf6661b94f220f8",
     "packages": [
         {
-            "name": "izniburak/router",
-            "version": "v1.5.3",
+            "name": "nikic/fast-route",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/izniburak/php-router.git",
-                "reference": "8c2095bad76f481608ea293b98c00c4d39d215ef"
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/izniburak/php-router/zipball/8c2095bad76f481608ea293b98c00c4d39d215ef",
-                "reference": "8c2095bad76f481608ea293b98c00c4d39d215ef",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "guzzlehttp/guzzle": "^5.3",
-                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.0"
+                "phpunit/phpunit": "^4.8.35|~5.7"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Buki\\": "src"
-                }
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
-                    "name": "İzni Burak Demirtaş",
-                    "email": "info@burakdemirtas.org",
-                    "homepage": "http://burakdemirtas.org"
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
                 }
             ],
-            "description": "simple router class for php",
-            "homepage": "https://github.com/izniburak/php-router",
+            "description": "Fast request router for PHP",
             "keywords": [
-                "Simple",
-                "php",
-                "route",
-                "router"
+                "router",
+                "routing"
             ],
-            "time": "2020-02-05T21:51:17+00:00"
+            "time": "2018-02-13T20:26:39+00:00"
         }
     ],
     "packages-dev": [],

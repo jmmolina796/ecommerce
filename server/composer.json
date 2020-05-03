@@ -8,6 +8,6 @@
         }
     ],
     "require": {
-        "izniburak/router": "^1.5"
+        "nikic/fast-route": "^1.3"
     }
 }
