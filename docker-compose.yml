@@ -7,6 +7,7 @@ services:
             - "3000:80"
         volumes:
             - ./server:/var/www/
+            - ecommerce_server_composer:/var/www/vendor
     ecommerce_client:
         build: ./client
         image: ecommerce_client_image
@@ -18,3 +19,4 @@ services:
 
 volumes:
     ecommerce_client_node_modules:
+    ecommerce_server_composer:
