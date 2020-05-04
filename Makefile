@@ -1,5 +1,5 @@
 up:
-	docker-compose up --detach
+	mkdir ./server/vendor && docker-compose up --detach
 
 start:
 	docker-compose start
@@ -14,7 +14,10 @@ logs:
 	docker-compose logs
 
 down:
-	docker-compose down --rmi local --volumes --remove-orphans
+	rm -rf ./server/vendor && docker-compose down --rmi local --volumes --remove-orphans
 
 build:
 	docker-compose build
+
+go-client:
+	docker container exec -it ecommerce_ecommerce_client_1 sh
