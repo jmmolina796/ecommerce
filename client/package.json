@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "rm -rf ../server/dist && parcel watch ./app/index.html -d ../server/dist --public-url /dist/ --hmr-port 1234",
-    "build": "rm -rf ../server/dist && parcel build ./app/index.html -d /dist/"
+    "dev": "rm -rf ../server/dist && parcel watch ./app/index.html -d ../server/dist --public-url /dist/ --hmr-port 1234 --no-source-maps",
+    "build": "rm -rf ../server/dist && parcel build ./app/index.html -d ../server/dist --public-url /dist/ --no-source-maps"
   },
   "author": "",
   "license": "ISC",

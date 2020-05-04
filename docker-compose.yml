@@ -20,3 +20,8 @@ services:
 volumes:
     ecommerce_client_node_modules:
     ecommerce_server_composer:
+        driver: local
+        driver_opts:
+            type: bind
+            device: $PWD/server/vendor
+            o: bind
