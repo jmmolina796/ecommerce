@@ -38,13 +38,12 @@
                         background-color: map.get($bgColorProductPercentage, $lightTheme);
                         border-radius: 20px;
                         color: map.get($colorProductPercentage, $lightTheme);
-                        display: block;
                         display: flex;
                         font-family: $ternaryFont;
-                        font-size: 16px;
+                        font-size: 20px;
                         justify-content: center;
                         left: 15px;
-                        padding: 6px 13px;
+                        padding: 8px 15px;
                         position: absolute;
                         top: 15px;
                     }
@@ -108,7 +107,7 @@
                     font-size: 18px;
                     max-width: 350px;
                     overflow: hidden;
-                    padding: 20px 0 10px 0;
+                    padding: 5px 0 10px 0;
                     text-align: center;
                     text-overflow: ellipsis;
                     width: $withProduct;
@@ -116,9 +115,9 @@
                 
                 .price {
                     font-family: $ternaryFont;
-                    font-size: 18px;
+                    font-size: 19px;
                     font-weight: bold;
-                    padding: 10px 0 10px 0;
+                    padding: 15px 0 5px 0;
                     text-align: center;
 
                     .offer {
