@@ -3,7 +3,7 @@ import { getUrlPath } from './utils';
 import listCategories from './list-categories';
 import listProducts from './list-products';
 
-const defaultProducts = 'cubrebocas';
+const defaultProducts = 'cubrebocas_neopreno';
 
 listCategories()
     .then((categories) => {

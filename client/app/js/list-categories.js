@@ -1,4 +1,4 @@
-import categoryTemplate from './templates/category';
+// import categoryTemplate from './templates/category';
 import navItemTemplate from './templates/navItem';
 import { getCategories } from './api/categories';
 import { $, $all, goToUrl } from './utils';
@@ -13,14 +13,14 @@ const listCategories = async () => {
         return;
     }
 
-    $container_categories.classList.remove("loading");
+    // $container_categories.classList.remove("loading");
 
     result.forEach(v => {
         const li = navItemTemplate(v.url, v.title);
         $nav.innerHTML += li;
 
-        const category = categoryTemplate(v);
-        $container_categories.innerHTML += category;
+        // const category = categoryTemplate(v);
+        // $container_categories.innerHTML += category;
     });
 
     $all('.goToUrl').forEach((el) => {
