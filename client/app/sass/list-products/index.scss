@@ -9,7 +9,8 @@
     .container-products {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
+        padding: 0 10px;
 
         &.loading {
             
@@ -26,7 +27,7 @@
         article {
             display: flex;
             flex-direction: column;
-            margin: 20px;
+            margin: 10px;
             
             &.disccount {
                 
@@ -103,7 +104,6 @@
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 2;
                     display: -webkit-box;
-                    flex-basis: 30px;
                     font-size: 18px;
                     max-width: 350px;
                     overflow: hidden;
