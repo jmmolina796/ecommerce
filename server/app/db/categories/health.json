@@ -18,14 +18,14 @@
         "url": "cubrebocas_desechables",
         "message": "Nueva colección",
         "imageName": "cubrebocas",
-        "products": "faceMasksDisposable"
+        "products": "faceMaskDisposable"
     },
     {
         "title": "Fashion",
         "url": "cubrebocas_fashion",
         "message": "Nueva colección",
         "imageName": "cubrebocas",
-        "products": "faceMasksFashion"
+        "products": "faceMaskFashion"
     },
     {
         "title": "Protector facial",
