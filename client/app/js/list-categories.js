@@ -3,15 +3,20 @@ import navItemTemplate from './templates/navItem';
 import { getCategories } from './api/categories';
 import { $, $all, goToUrl } from './utils';
 
-const $container_categories = $(".container-categories");
-const $nav = $("nav ul");
+export let categoriesUrls = []
 
-const listCategories = async () => {
+export const listCategories = async () => {
+    
+    // const $container_categories = $(".container-categories");
+    const $nav = $("nav ul");
+
     const { result, error } = await getCategories();
     if (error) {
         console.log(error);
         return;
     }
+
+    categoriesUrls = result.map(c => c.url);
 
     // $container_categories.classList.remove("loading");
 
@@ -29,5 +34,3 @@ const listCategories = async () => {
 
     return result;
 };
-
-export default listCategories;

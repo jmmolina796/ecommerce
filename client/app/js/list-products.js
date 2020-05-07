@@ -1,10 +1,19 @@
 import productTemplate from './templates/product';
 import { getProducts } from './api/products';
-import { $ } from './utils';
-import { scrollTo } from './utils';
+import { $, getUrlPath, scrollTo } from './utils';
+import { categoriesUrls } from './list-categories';
 
-const listProducts = async (type, scroll = false, clearElements = true) => {
+const currentProductType = () => {
+    const defaultProducts = 'cubrebocas_neopreno';
+    const lastPath = getUrlPath(-1);
+
+    return categoriesUrls.includes(lastPath) ? lastPath : defaultProducts ;
+}
+
+const listProducts = async (scroll = false, clearElements = true) => {
     
+    const type = currentProductType();
+
     const $globalContainer = $("#list-products");
     const $container_products = $(".container-products");
 

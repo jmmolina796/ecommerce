@@ -1,4 +1,4 @@
-import { getUrlPath, $ } from './utils';
+import { $ } from './utils';
 import listProducts from './list-products';
 
 const initIntersectionObserver = () => {
@@ -9,8 +9,7 @@ const initIntersectionObserver = () => {
             console.log('Loading');
             const scroll = false;
             const clearElements = false;
-            const lastPath = getUrlPath(-1);
-            listProducts(lastPath, scroll, clearElements);
+            listProducts(scroll, clearElements);
         }
     }
 
