@@ -1,6 +1,6 @@
 @mixin small {
     #list-products {
-        margin: 30px 0 30px 0;
+        margin: 30px 0 0 0;
         
         h2 {
             font-size: 40px;
@@ -28,7 +28,7 @@
 
 @mixin medium {
     #list-products {
-        margin: 50px 0 50px 0;
+        margin: 50px 0 0 0;
 
         .container-products {
 
@@ -52,7 +52,7 @@
 
 @mixin large {
     #list-products {
-        margin: 80px 0 80px 0;
+        margin: 80px 0 0 0;
 
         .container-products {
 

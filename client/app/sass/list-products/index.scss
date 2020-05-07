@@ -4,25 +4,21 @@
 @use "./variables.scss" as *;
 
 #list-products {
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0 0;
     
+    &.loading {
+
+        .loader-container {
+            display: flex;
+        }
+
+    }
+
     .container-products {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 0 10px;
-
-        &.loading {
-            
-            > article {
-                display: none;
-            }
-
-            .loader {
-                display: block;
-            }
-
-        }
 
         article {
             display: flex;
@@ -131,9 +127,13 @@
             }
         }
         
-        .loader {
-            display: none;
-        }
+    }
+
+    .loader-container {
+        align-items: center;
+        display: none;
+        flex-basis: 100%;
+        justify-content: center;
     }
     
     h2 {

@@ -3,15 +3,20 @@ import { getProducts } from './api/products';
 import { $ } from './utils';
 import { scrollTo } from './utils';
 
-const listProducts = async (type, scroll = false) => {
+const listProducts = async (type, scroll = false, clearElements = true) => {
     
+    const $globalContainer = $("#list-products");
     const $container_products = $(".container-products");
 
     if (scroll) {
         scrollTo($("#products-title"));
     }
 
-    $container_products.classList.add("loading");
+    $globalContainer.classList.add("loading");
+
+    if(clearElements) {
+        $container_products.innerHTML = "";
+    }
     
     const { result, error } = await getProducts(type);
     if (error) {
@@ -21,11 +26,7 @@ const listProducts = async (type, scroll = false) => {
     
     $("#products-title").textContent = result["titleCategory"];
 
-    while ($container_products.lastElementChild.className !== 'loader') {
-        $container_products.removeChild($container_products.lastChild);
-    }
-    
-    $container_products.classList.remove("loading");
+    $globalContainer.classList.remove("loading");
     
     result.products.forEach(v => {
         const product = productTemplate(v);
@@ -35,6 +36,8 @@ const listProducts = async (type, scroll = false) => {
     if (scroll) {
         scrollTo($("#products-title"));
     }
+
+    return Promise.resolve();
 };
 
 export default listProducts;
