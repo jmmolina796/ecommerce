@@ -1,41 +1,34 @@
 [
     {
-        "title": "Cubrebocas",
-        "url": "cubrebocas",
+        "title": "Neopreno",
+        "url": "cubrebocas_neopreno",
         "message": "Nueva colección",
         "imageName": "cubrebocas",
-        "products": "faceMasks"
+        "products": "faceMaskNeoprene"
     },
     {
-        "title": "Gel antiséptico",
-        "url": "gel_antibacterial",
+        "title": "Antibacteriales",
+        "url": "cubrebocas_antibacterial",
         "message": "Nueva colección",
-        "imageName": "gel",
-        "products": "antibacterialGels"
+        "imageName": "cubrebocas",
+        "products": "faceMaskAntimicrobial"
     },
     {
-        "title": "Papel higiénico",
-        "url": "papel_higienico",
+        "title": "Desechables",
+        "url": "cubrebocas_desechables",
         "message": "Nueva colección",
-        "imageName": "papel",
-        "products": "toiletPaper"
+        "imageName": "cubrebocas",
+        "products": "faceMasksDisposable"
     },
     {
-        "title": "Guantes",
-        "url": "guantes",
+        "title": "Fashion",
+        "url": "cubrebocas_fashion",
         "message": "Nueva colección",
-        "imageName": "guantes",
-        "products": "gloves"
+        "imageName": "cubrebocas",
+        "products": "faceMasksFashion"
     },
     {
-        "title": "Desinfectantes",
-        "url": "desinfectantes",
-        "message": "Nueva colección",
-        "imageName": "desinfectantes",
-        "products": "disinfectants"
-    },
-    {
-        "title": "Protectores",
+        "title": "Protector facial",
         "url": "protectores_faciales",
         "message": "Nueva colección",
         "imageName": "protector",
