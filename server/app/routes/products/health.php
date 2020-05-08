@@ -17,6 +17,9 @@
     }
 
     function product_health_handler($vars, $uri) {
+        
+        $elementsLoaded = (is_numeric($_GET['elements']) && $_GET['elements'] >= 0) ? $_GET['elements'] : 0 ;
+        $loadInterval = 12;
 
         $selectedUrl = getUrlPath($uri, -1);
         
@@ -35,6 +38,8 @@
 
         $products = getJsonFromFile($path);
 
+        $products = array_splice($products, $elementsLoaded, $loadInterval);
+
         $preparedProduct = (object) [
             "titleCategory" => $currentCategory->title,
             "urlCategory" => $currentCategory->url,
@@ -42,5 +47,4 @@
         ];
 
         sendAndTransformJson($preparedProduct);
-
     }
