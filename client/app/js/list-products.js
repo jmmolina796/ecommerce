@@ -4,7 +4,7 @@ import { $, getUrlPath, scrollTo } from './utils';
 import { categoriesUrls } from './list-categories';
 
 const currentProductType = () => {
-    const defaultProducts = 'cubrebocas_neopreno';
+    const defaultProducts = 'cubrebocas_fashion';
     const lastPath = getUrlPath(-1);
 
     return categoriesUrls.includes(lastPath) ? lastPath : defaultProducts ;
