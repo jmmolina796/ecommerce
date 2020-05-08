@@ -7,6 +7,8 @@ export const $_ = (el, event, callback) => $(el).addEventListener(event, callbac
 
 export const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1).toLocaleLowerCase();
 
+export const getCompleteUrl = () => window.location.href;
+
 export const toNumber = (str) => {
     if (!str || typeof str !== 'string') {
         return NaN;
@@ -45,12 +47,19 @@ export const getUrlPath = position => {
     }
 };
 
+
 export function goToUrl(event) {
+    event.preventDefault();
+
+    const currentUrl = getCompleteUrl();
     const url = this.href
+
+    if(currentUrl === url) {
+        return;
+    }
+
     window.history.pushState(null, null, url);
     
     const lastPath = getUrlPath(-1);
     listProducts(lastPath, true);
-
-    event.preventDefault();
 }
