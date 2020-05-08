@@ -1,10 +1,10 @@
 [
     {
-        "title": "Neopreno",
-        "url": "cubrebocas_neopreno",
+        "title": "Fashion",
+        "url": "cubrebocas_fashion",
         "message": "Nueva colección",
         "imageName": "cubrebocas",
-        "products": "faceMaskNeoprene"
+        "products": "faceMaskFashion"
     },
     {
         "title": "Antibacteriales",
@@ -14,24 +14,24 @@
         "products": "faceMaskAntimicrobial"
     },
     {
+        "title": "Neopreno",
+        "url": "cubrebocas_neopreno",
+        "message": "Nueva colección",
+        "imageName": "cubrebocas",
+        "products": "faceMaskNeoprene"
+    },
+    {
+        "title": "Tela",
+        "url": "cubrebocas_tela",
+        "message": "Nueva colección",
+        "imageName": "cubrebocas",
+        "products": "faceMaskDiy"
+    },
+    {
         "title": "Desechables",
         "url": "cubrebocas_desechables",
         "message": "Nueva colección",
         "imageName": "cubrebocas",
         "products": "faceMaskDisposable"
-    },
-    {
-        "title": "Fashion",
-        "url": "cubrebocas_fashion",
-        "message": "Nueva colección",
-        "imageName": "cubrebocas",
-        "products": "faceMaskFashion"
-    },
-    {
-        "title": "Protector facial",
-        "url": "protectores_faciales",
-        "message": "Nueva colección",
-        "imageName": "protector",
-        "products": "faceShields"
     }
 ]

@@ -79,5 +79,32 @@
         "rating": "5",
         "image": "https://images-na.ssl-images-amazon.com/images/I/51ppdF4MQlL._AC_SX679_.jpg",
         "url": "https://www.amazon.com.mx/Mascarilla-cubreboca-ni%C3%B1as-fibra-SILVADUR%C2%AE/dp/B08745NSSJ/ref=sr_1_5?dchild=1&qid=1588570035&sr=8-5&srs=19207030011"
+    },
+    {
+        "name": "Cubrebocas Profesional Non Woven WhiteCross Negro",
+        "originalPrice": "133.42",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "5",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/31%2BKJHPQQvL._AC_.jpg",
+        "url": "https://www.amazon.com.mx/Profesional-Covid19-WhiteCross-MXWHC-004-Lavable/dp/B087CC9M99/ref=sr_1_1?m=A3VDS7ELV1AA9T&marketplaceID=A1AM78C64UM0Y8&qid=1588841233&s=merchant-items&sr=1-1"
+    },
+    {
+        "name": "Cubrebocas Profesional Non Woven WhiteCross Rosa",
+        "originalPrice": "123.42",
+        "discountPrice": null,
+        "savings": null,
+        "rating": "4",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/31VPERYuMRL._AC_.jpg",
+        "url": "https://www.amazon.com.mx/Cubrebocas-lavable-WhiteCross-MXWHC-010-Lavable/dp/B087CCYRCM/ref=sr_1_2?m=A3VDS7ELV1AA9T&marketplaceID=A1AM78C64UM0Y8&qid=1588841233&s=merchant-items&sr=1-2"
+    },
+    {
+        "name": "Cubrebocas Profesional Non Woven WhiteCross Azul Marino",
+        "originalPrice": "123.42",
+        "discountPrice": null,
+        "savings": null,
+        "rating": null,
+        "image": "https://images-na.ssl-images-amazon.com/images/I/31P44U3499L._AC_.jpg",
+        "url": "https://www.amazon.com.mx/Cubrebocas-Profesional-WhiteCross-MXWHC-001-Lavable/dp/B087CXSKM4/ref=sr_1_4?m=A3VDS7ELV1AA9T&marketplaceID=A1AM78C64UM0Y8&qid=1588841256&s=merchant-items&sr=1-4"
     }
 ]
