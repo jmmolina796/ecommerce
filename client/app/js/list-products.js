@@ -1,7 +1,10 @@
 import productTemplate from './templates/product';
 import { getProducts } from './api/products';
-import { $, getUrlPath, scrollTo } from './utils';
-import { categoriesUrls } from './list-categories';
+import { $, $all, getUrlPath, scrollTo, extractUrlPart } from './utils';
+
+let firstLoad = true;
+
+let categoriesUrls = [];
 
 let amountOfProductsLoaded = 0;
 let isLoadedDisabled = false;
@@ -14,6 +17,15 @@ const currentProductType = () => {
 }
 
 const listProducts = async (scroll = false, clearElements = true) => {
+
+    if(firstLoad) {
+        firstLoad = false;
+        $all("nav a").forEach(el => categoriesUrls.push(extractUrlPart(el.href, -1)));
+        amountOfProductsLoaded = $all("#list-products article").length;
+        if(amountOfProductsLoaded > 0) { 
+            return Promise.resolve();
+        }
+    }
     
     const $globalContainer = $("#list-products");
     const $container_products = $(".container-products");
@@ -33,7 +45,6 @@ const listProducts = async (scroll = false, clearElements = true) => {
     }
     
     $globalContainer.classList.add("loading");
-    
 
     const type = `${currentProductType()}?elements=${amountOfProductsLoaded}`;
     

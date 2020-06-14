@@ -1,36 +1,42 @@
 // import categoryTemplate from './templates/category';
-import navItemTemplate from './templates/navItem';
-import { getCategories } from './api/categories';
-import { $, $all, goToUrl } from './utils';
+// import navItemTemplate from './templates/navItem';
+// import { getCategories } from './api/categories';
+// import { $all, goToUrl, extractUrlPart } from './utils';
 
-export let categoriesUrls = []
+// export let categoriesUrls = [];
 
-export const listCategories = async () => {
+// window.addEventListener('DOMContentLoaded', function(e){
+//     $all('.goToUrl').forEach((el) => {
+//         el.addEventListener('click', goToUrl);
+//     });
+// });
+
+// export const listCategories = async () => {
     
-    // const $container_categories = $(".container-categories");
-    const $nav = $("nav ul");
+//     // const $container_categories = $(".container-categories");
+//     const $nav = $("nav ul");
 
-    const { result, error } = await getCategories();
-    if (error) {
-        console.log(error);
-        return;
-    }
+//     const { result, error } = await getCategories();
+//     if (error) {
+//         console.log(error);
+//         return;
+//     }
 
-    categoriesUrls = result.map(c => c.url);
+//     categoriesUrls = result.map(c => c.url);
 
-    // $container_categories.classList.remove("loading");
+//     // $container_categories.classList.remove("loading");
 
-    result.forEach(v => {
-        const li = navItemTemplate(v.url, v.title);
-        $nav.innerHTML += li;
+//     result.forEach(v => {
+//         const li = navItemTemplate(v.url, v.title);
+//         $nav.innerHTML += li;
 
-        // const category = categoryTemplate(v);
-        // $container_categories.innerHTML += category;
-    });
+//         // const category = categoryTemplate(v);
+//         // $container_categories.innerHTML += category;
+//     });
 
-    $all('.goToUrl').forEach((el) => {
-        el.addEventListener('click', goToUrl);
-    });
+//     $all('.goToUrl').forEach((el) => {
+//         el.addEventListener('click', goToUrl);
+//     });
 
-    return result;
-};
+//     return result;
+// };

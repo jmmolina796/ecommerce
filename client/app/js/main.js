@@ -1,20 +1,16 @@
-import { listCategories } from './list-categories';
 import listProducts from './list-products';
 import initIntersectionObserver from './infiniteScroll';
+import { $all, goToUrl } from './utils';
 
-listCategories()
-    .then((categories) => {
-        listProducts()
-            .then(initIntersectionObserver);
-    })
-    .catch((err) => {
-        listProducts()
-            .then(initIntersectionObserver);
+window.addEventListener('DOMContentLoaded', function(e){
+    
+    $all('.goToUrl').forEach((el) => {
+        el.addEventListener('click', goToUrl);
     });
+    
+    const scroll = false;
+    const clearElements = false;
+    listProducts(scroll, clearElements)
+        .then(initIntersectionObserver);
 
-
-
-
-
-
-
+});

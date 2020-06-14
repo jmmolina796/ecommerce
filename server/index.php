@@ -2,26 +2,16 @@
 
 	require './vendor/autoload.php';
 
-	require_once('./app/routes/root.php');
-	require_once('./app/routes/stores/health.php');
-	require_once('./app/routes/categories/health.php');
-	require_once('./app/routes/products/health.php');
+	require_once('./app/helpers/stores.php');
+	require_once('./app/helpers/products.php');
 
 	$dispatcher = FastRoute\simpleDispatcher(function($router) {
 		
-		$router->get('/', 'root_handler');
+		// $router->get('/', 'root_handler');
 
-		$router->addGroup('', 'store_health_handler');
-		$router->addGroup('/coronavirus', 'store_health_handler');
-		$router->addGroup('/covid', 'store_health_handler');
-		
-		$router->get('/api/categories', 'categories_health_handler');
-		$router->get('/api/categories/coronavirus', 'categories_health_handler');
-		$router->get('/api/categories/covid', 'categories_health_handler');
+		$router->addGroup('', 'stores_handler');
 
-		$router->addGroup('/api/products', 'products_health_handler');
-		$router->addGroup('/api/products/coronavirus', 'products_health_handler');
-		$router->addGroup('/api/products/covid', 'products_health_handler');
+		$router->addGroup('/api/products', 'products_handler');
 		
 	});
 

@@ -1,5 +1,10 @@
 <?php
 
+    function getBaseUrl() {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+        return $actual_link;
+    }
+
     function getUrlPath($uri, $position) {
         $path = substr($uri, 1);
         $pathArray = explode('/', $path);
@@ -26,4 +31,56 @@
         $json = json_encode($object);
         header('Content-Type: application/json');
         echo $json;
+    }
+
+    function minifyHTML($html) 
+    {
+        $search = array(
+            '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+            '/[^\S ]+\</s',     // strip whitespaces before tags, except space
+            '/(\s)+/s',         // shorten multiple whitespace sequences
+            '~>\\s+<~m'
+        );
+
+        $replace = array('>','<','\\1','><');
+        $html = preg_replace($search, $replace, $html);
+        return trim($html);
+    }
+
+    function template($name, $vars = array()) {
+        extract($vars);
+        require_once "./app/templates/$name.php";
+        return preg_replace('~>\\s+<~m', '><', $html);
+    }
+
+    function load($name, $vars = array()) {
+        extract($vars);
+        require "./dist/$name.php";
+    }
+
+    function toNumber ($str) {
+        
+        $strWithoutCommas = preg_replace('/,/', '', $str);
+        
+        if (!is_numeric($strWithoutCommas)) {
+            return null;
+        }
+    
+        return $strWithoutCommas;
+    };
+
+    function getDiscountPercentage($originalPriceStr, $discountPriceStr) {
+        $originalPrice = toNumber($originalPriceStr);
+        $discountPrice = toNumber($discountPriceStr);
+
+        if(is_null($originalPrice) || $originalPrice === 0) {
+            $percentage = 0;
+        } else {
+            $percentage = 100 - ($discountPrice * 100 / $originalPrice);
+        }
+
+        if (!is_numeric($percentage)) {
+            $percentage = 0;
+        }
+        return (int) $percentage;
     }

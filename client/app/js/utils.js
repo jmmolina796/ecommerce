@@ -47,6 +47,14 @@ export const getUrlPath = position => {
     }
 };
 
+export const extractUrlPart = (url, position) => {
+    const urlArray = url.split("/");
+    if (position === -1) {
+        return urlArray[urlArray.length - 1];
+    } else {
+        return urlArray[position];
+    }
+};
 
 export function goToUrl(event) {
     event.preventDefault();
@@ -61,5 +69,5 @@ export function goToUrl(event) {
     window.history.pushState(null, null, url);
     
     const lastPath = getUrlPath(-1);
-    listProducts(lastPath, true);
+    listProducts(lastPath);
 }

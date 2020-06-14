@@ -1,6 +1,6 @@
 import 'lazysizes';
 
-import '../sass';
+import '../sass/index.scss';
 
 import './main-menu';
 import './main-message';

@@ -2,9 +2,20 @@
 
     include_once('./app/util.php');
 
-    function products_health_handler($router) {
+    function products_handler($router) {
+
+        $path = './app/db/categories/';
+        $categories = array_diff(scandir($path), array('..', '.'));
+
+        foreach($categories as $category) {
+            product_handler($router, $category);
+        }
         
-        $path = './app/db/categories/health.json';
+    }
+
+    function product_handler($router, $categoryName) {
+
+        $path = "./app/db/categories/$categoryName";
         $categories = getJsonFromFile($path);
 
         $products = array_map(function($category) {
@@ -12,18 +23,21 @@
         }, $categories);
         
         foreach($products as $product) {
-            $router->get($product, 'product_health_handler');
+            $router->get($product, function($vars, $uri) use ($categoryName) {
+                product_api_handler($vars, $uri, $categoryName);
+            });
         }
+
     }
 
-    function product_health_handler($vars, $uri) {
+    function product_api_handler($vars, $uri, $categoryName) {
         
         $elementsLoaded = (is_numeric($_GET['elements']) && $_GET['elements'] >= 0) ? $_GET['elements'] : 0 ;
         $loadInterval = 12;
 
         $selectedUrl = getUrlPath($uri, -1);
         
-        $path = './app/db/categories/health.json';
+        $path = "./app/db/categories/$categoryName";
         $categories = getJsonFromFile($path);
 
         $selectedCategory = array_filter($categories, function($category) use ($selectedUrl) {
