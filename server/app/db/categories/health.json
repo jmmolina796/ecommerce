@@ -14,13 +14,6 @@
         "products": "faceMaskAntimicrobial"
     },
     {
-        "title": "Neopreno",
-        "url": "cubrebocas_neopreno",
-        "message": "Nueva colección",
-        "imageName": "cubrebocas",
-        "products": "faceMaskNeoprene"
-    },
-    {
         "title": "Tela",
         "url": "cubrebocas_tela",
         "message": "Nueva colección",
@@ -33,5 +26,19 @@
         "message": "Nueva colección",
         "imageName": "cubrebocas",
         "products": "faceMaskDisposable"
+    },
+    {
+        "title": "Polainas",
+        "url": "cubrebocas_polainas",
+        "message": "Nueva colección",
+        "imageName": "cubrebocas",
+        "products": "faceMaskScarf"
+    },
+    {
+        "title": "Led",
+        "url": "cubrebocas_led",
+        "message": "Nueva colección",
+        "imageName": "cubrebocas",
+        "products": "faceMaskLed"
     }
 ]
