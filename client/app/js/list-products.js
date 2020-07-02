@@ -1,6 +1,7 @@
 import productTemplate from './templates/product';
 import { getProducts } from './api/products';
 import { $, $all, getUrlPath, scrollTo, extractUrlPart } from './utils';
+import { countryCode } from './detectCountry';
 
 let firstLoad = true;
 
@@ -46,7 +47,7 @@ const listProducts = async (scroll = false, clearElements = true) => {
     
     $globalContainer.classList.add("loading");
 
-    const type = `${currentProductType()}?elements=${amountOfProductsLoaded}`;
+    const type = `${currentProductType()}?elements=${amountOfProductsLoaded}&countryCode=${countryCode}`;
     
     const { result, error } = await getProducts(type);
     if (error) {

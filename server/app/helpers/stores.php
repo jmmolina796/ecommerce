@@ -5,7 +5,10 @@
 
     function stores_handler($router) {
 
-        $path = './app/db/stores/';
+        $countryCode = getCountryCode();
+
+        $path = "./app/db/stores/$countryCode/";
+        
         $stores = array_diff(scandir($path), array('..', '.'));
 
         foreach($stores as $store) {
@@ -15,10 +18,13 @@
     }
 
     function store_handler($router, $storeName) {
-        $path = "./app/db/stores/$storeName";
+
+        $countryCode = getCountryCode();
+
+        $path = "./app/db/stores/$countryCode/$storeName";
         $storeInfo = getJsonFromFile($path);
 
-        $path = "./app/db/categories/$storeName";
+        $path = "./app/db/categories/$countryCode/$storeName";
         $categoriesInfo = getJsonFromFile($path);
 
         $categories = array_map(function($category) {

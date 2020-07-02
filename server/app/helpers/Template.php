@@ -3,6 +3,8 @@
     include_once('./app/util.php');
 
     class Template {
+        private $countryCode;
+
         private $storeInfo;
         private $categoriesInfo;
 
@@ -15,6 +17,8 @@
         private $products;
 
         function __construct($storeInfo, $categoriesInfo, $uri) {
+            $this->countryCode = getCountryCode();
+
             $this->storeInfo = $storeInfo;
             $this->categoriesInfo = $categoriesInfo;
 
@@ -63,7 +67,7 @@
             if ($this->storeInfo->displayProducts) {
                 if ($this->currentCategory) {
                     $products = $this->currentCategory->products;
-                    $path = "./app/db/products/".$products.".json";
+                    $path = "./app/db/products/".$this->countryCode."/".$products.".json";
                     $this->products = getJsonFromFile($path);
                 } else {
                     $this->products = array();
@@ -149,6 +153,7 @@
             $fileName = $this->storeInfo->templateFile;
             
             $head = minifyHTML($this->setHead());
+            $countryCode = $this->countryCode;
             $h1 = minifyHTML($this->setH1());
             $nav = minifyHTML($this->setNav());
             $mainMessage = minifyHTML($this->setMainMessage());

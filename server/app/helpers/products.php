@@ -4,7 +4,9 @@
 
     function products_handler($router) {
 
-        $path = './app/db/categories/';
+        $countryCode = getCountryCode();
+
+        $path = "./app/db/categories/$countryCode/";
         $categories = array_diff(scandir($path), array('..', '.'));
 
         foreach($categories as $category) {
@@ -15,7 +17,9 @@
 
     function product_handler($router, $categoryName) {
 
-        $path = "./app/db/categories/$categoryName";
+        $countryCode = getCountryCode();
+
+        $path = "./app/db/categories/$countryCode/$categoryName";
         $categories = getJsonFromFile($path);
 
         $products = array_map(function($category) {
@@ -31,13 +35,15 @@
     }
 
     function product_api_handler($vars, $uri, $categoryName) {
+
+        $countryCode = getCountryCode();
         
         $elementsLoaded = (is_numeric($_GET['elements']) && $_GET['elements'] >= 0) ? $_GET['elements'] : 0 ;
         $loadInterval = 12;
 
         $selectedUrl = getUrlPath($uri, -1);
         
-        $path = "./app/db/categories/$categoryName";
+        $path = "./app/db/categories/$countryCode/$categoryName";
         $categories = getJsonFromFile($path);
 
         $selectedCategory = array_filter($categories, function($category) use ($selectedUrl) {
@@ -48,7 +54,7 @@
 
         $currentCategory = $selectedCategory[$firstKey];
 
-        $path = './app/db/products/'.$currentCategory->products.'.json';
+        $path = "./app/db/products/$countryCode/".$currentCategory->products.".json";
 
         $products = getJsonFromFile($path);
 

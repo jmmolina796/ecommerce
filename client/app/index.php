@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <header>
+    <header data-country="<?= $countryCode ?>">
         <?= $h1 ?>
         <div class="icon_menu" id="main_menu"></div>
         <?= $nav ?>

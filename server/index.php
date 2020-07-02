@@ -5,6 +5,8 @@
 	require_once('./app/helpers/stores.php');
 	require_once('./app/helpers/products.php');
 
+	setCountryCode();
+
 	$dispatcher = FastRoute\simpleDispatcher(function($router) {
 		
 		// $router->get('/', 'root_handler');

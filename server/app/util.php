@@ -84,3 +84,37 @@
         }
         return (int) $percentage;
     }
+
+    function getVisIpAddr() { 
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) { 
+            return $_SERVER['HTTP_CLIENT_IP']; 
+        } 
+        else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) { 
+            return $_SERVER['HTTP_X_FORWARDED_FOR']; 
+        } 
+        else { 
+            return $_SERVER['REMOTE_ADDR']; 
+        } 
+    }
+
+    function setCountryCode() {
+        if($_GET['countryCode']) {
+            $GLOBALS['countryCode'] = strtolower($_GET['countryCode']);
+        } else {
+            $countryCode = 'MX';
+            $ip = getVisIpAddr();
+            
+            $result = file_get_contents('http://ip2c.org/'.$ip);
+    
+            if ($result[0] === '1') {
+                $reply = explode(';',$result);
+                $countryCode = $reply[1];
+            }
+    
+            $GLOBALS['countryCode'] = strtolower($countryCode);
+        }
+    }
+
+    function getCountryCode() {
+        return $GLOBALS['countryCode'];
+    }
